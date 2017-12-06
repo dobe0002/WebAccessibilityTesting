@@ -1,0 +1,112 @@
+mixin externalLink(href, extraClasses)
+	- extraClasses = extraClasses || ''
+	a(href= href target="_blank" class= extraClasses)
+		block
+		| 
+		+faText('external-link','','(new window)')
+
+mixin testingDocLink(heading,text,extraClasses)
+	- extraClasses = extraClasses || ''
+	- heading = heading || ''
+	- var url="https://z.umn.edu/kkd-a11y-testing#heading="+heading
+	+externalLink(url, extraClasses)
+		=text
+
+mixin howToCheck(heading)
+	+testingDocLink(heading,"How to check", "btn btn-outline-dark btn-sm")
+
+
+
+mixin fa(type, extraClasses)
+	- extraClasses = extraClasses || ''
+	- var c='fa fa-'+type+' '+extraClasses
+	i(class= c aria-hidden='true')
+
+mixin faText(type, extraClasses, text)
+	+fa(type,extraClasses)
+	- text = text || ''
+	span.sr-only #{text}
+
+mixin alert
+	.alert.alert-warning(role="alert")
+		+faText('bug','fa-2x','Bug')  
+		block
+
+mixin header_block(title, link)  
+	header
+		h3.main-title #{title}
+		ul
+			li
+				a(href=link, target="_blank")
+
+mixin footer
+	footer
+		small By Kim Doberstein - University of Minnesota 
+
+mixin banner
+	header
+		.container
+			.row
+				.col-sm-12
+					.page-header.h1
+						|Web Accessibility Testing
+						small For Everyone
+
+mixin headIncludes
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet")
+	link(href="/assets/css/app.css" rel="stylesheet")
+
+mixin bodyIncludes
+	script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+	script(src="/assets/javascripts/skipto.min.js")
+	script(src="/assets/javascripts/app-min.js")
+
+
+mixin breadcrumbHome
+	nav.container(aria-label=Breadcrumbs)
+		ol.breadcrumb
+			li.breadcrumb-item
+				a(href="../index.html")
+					+fa('home','fa-2x') 
+					|Home
+			block
+
+mixin breadcrumbSamplePageHome
+	+breadcrumbHome
+		if block
+			li.breadcrumb-item
+				a(href="sampleSite-index.html")
+					+fa('cogs','fa-2x') 
+					| Sample Pages
+		else
+			li.active.breadcrumb-item
+				+fa('cogs','fa-2x') 
+				
+				| Sample Pages
+		block
+
+mixin breadcrumbSamplePage
+	+breadcrumbSamplePageHome
+		li.active.breadcrumb-item
+			block
+
+mixin checkFor(title)
+	li
+		+fa('check-square-o')
+		=title
+
+mixin modal
+	.modal#bs4Modal(tabindex="-1" role="dialog")
+		.modal-dialog(role="document")
+			.modal-content
+				.modal-header
+					h2.modal-title.h5 Modal title goes here
+					button.close(type="button" data-dismiss="modal" aria-label="Close")
+						+faText('times','','Close Modal')
+
+				.modal-body
+					|Modal body text goes here.
+
+				.modal-footer
+					|Modal footer buttons go here

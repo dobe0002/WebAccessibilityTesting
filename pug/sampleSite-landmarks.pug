@@ -1,0 +1,63 @@
+extends templates/testerPage.pug
+
+
+block title
+	|Landmarks
+
+block checkFor
+	+checkFor('Main content is surrounded by a "main" landmark. - There should only be 1 main landmark.')
+	+checkFor('Banners are wrapped in a "header" landmark')
+	+checkFor('Navigation elements are wrapped in a "navigation" landmark')
+	+checkFor('Footers are wrapped in a "contentinfo" or "footer" landmark.')
+
+
+block howToCheckURL
+	+howToCheck("h.jmb3un68v8ef")
+
+block content
+	.row
+		.col-md-9
+			h2 First Subheading
+			p
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Sed pretium libero in pharetra rutrum. Cras a ante viverra, fringilla tellus ut, blandit lorem.
+
+
+			h3 Sub-subheading
+			p
+				|Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie. Mauris hendrerit tincidunt congue. Pellentesque purus eros, cursus ut nisi vitae, iaculis laoreet quam. Proin faucibus cursus purus.
+
+
+		.col-md-3
+			.h4(style="margin-top:22px") What's on this Page
+			ul
+				li
+					a(href="#1") A link
+				li
+					a(href="#2") Another link
+				li
+					a(href="#3") Another another link
+
+			+alert
+				|"What's on this page" is not wrapped in a "navigation" landmark.
+
+
+block outsideLandmark
+		p.container
+			|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Sed pretium libero in pharetra rutrum. Cras a ante viverra, fringilla tellus ut, blandit lorem.
+		.container
+			+alert
+				|The last paragraph is outside of any landmarks.
+
+		.siteFooter
+			small
+				|By Kim Doberstein - University of Minnesota 
+
+		.container
+			+alert
+				|Footer is not inside a "footer" or "contentinfo" landmark.
+
+block extraCode
+	script
+		|$('footer').hide();
+
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html  >
+<html lang="en"> 
+  <head>
+    <title> Headings
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
+    <link href="/assets/css/app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
+        <li class="breadcrumb-item"><a href="sampleSite-index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
+        <li class="active breadcrumb-item">Headings
+        </li>
+      </ol>
+    </nav>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Headings
+          </h1>
+          <div class="card bg-light">
+            <div class="card-body">
+              <h2 class="h3">Things to check for:</h2>
+              <ul class="fa-ul">
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Headings show on a headings list
+                </li>
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>The page title is a level 1 heading
+                </li>
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Headings are in order and do not skip levels
+                </li>
+              </ul>
+              <ul class="list-inline testerActionButtons">
+                <li class="list-inline-item">
+                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                </li>
+                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.ey9zei51oc45" target="_blank">How to check <i class="fa fa-external-link " aria-hidden="true"></i><span class="sr-only">(new window)</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Classification</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo.</p>
+          <div class="subheading">
+            <h3>Taxonomy</h3>
+            <p>Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.</p>
+            <h3>Details</h3>
+            <p>Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.</p>
+          </div>
+          <div class="h2">Botany</div>
+          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>"Botany" is not coded as a heading and does not show in a headings list.
+          </div>
+          <p>Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.</p>
+          <div class="subheading">
+            <h3>Details</h3>
+            <p>Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.</p>
+          </div>
+          <h2>Uses</h2>
+          <p>Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.</p>
+          <div class="subheading">
+            <h4 class="h3">Edibles</h4>
+            <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>"Edibles" heading above is out of order.
+            </div>
+            <p>Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><small>By Kim Doberstein - University of Minnesota </small></footer>
+    <div class="modal" id="bs4Modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5">Modal title goes here</h2>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-times " aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            </button>
+          </div>
+          <div class="modal-body">Modal body text goes here.</div>
+          <div class="modal-footer">Modal footer buttons go here</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/assets/javascripts/skipto.min.js"></script>
+    <script src="/assets/javascripts/app-min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+extends templates/testerPage.pug
+
+block head
+	style.
+		.btn-link:hover, .btn-link:focus{cursor:pointer;}
+		.crazyForm{position:relative; padding-bottom:130px}
+		.crazyForm .form-group{width:45%}
+		#star{
+			display:inline-block;
+			color:#ff9800;
+		}
+		#star .starFull{display:none;}
+		h2{margin-top:50px}
+		label{padding-right:20px;}
+		legend{font-size:1rem; padding-top:20px}
+
+block title
+	|Forms
+
+block checkFor
+	+checkFor('Form labels are associated with their elements.')
+	+checkFor('You can easily get to and control all actionable items only using the keyboard.')
+	+checkFor('The tab order of form elements make sense.')
+	+checkFor('A form element that has “focus” ( tabbed or arrowed to) looks visually different.')
+
+
+block howToCheckURL
+	+howToCheck("h.jffnss7v41w8")
+
+
+block content
+	.row
+		.col
+			h2 Address
+			form.crazyForm
+				button.btn.btn-primary(style="position:absolute;bottom:0") Submit
+		
+				.form-group.pull-right
+					label(for="exampleInputLastName") Last name
+					input.form-control#exampleInputLastName(type="text" placeholder="Last Name")
+
+				.form-group
+					label First name
+					input.form-control#exampleInputFirstName(type="text" placeholder="First Name")
+				+alert
+					| The "First name" label is not associated with its text field.
+
+				.form-group.pull-left
+					label(for="exampleInputAddress") Address
+					input.form-control#exampleInputAddress(type="text" placeholder="Address" )
+					
+
+				.form-group.pull-right
+					label(for="exampleInputCity") City
+					input.form-control#exampleInputCity(type="text" placeholder="City") 
+
+			+alert
+				p Tab order is incorrect.  The tab order should be:
+				ol
+					li First name
+					li Last name
+					li Address
+					li City
+					li Submit button
+
+			h2 Another form
+			form
+				.form-group
+					input.form-control.specialLabel#exampleInputSearch(type="text" placeholder="Search")
+
+					small#passwordHelpBlock.form-text.text-muted
+						|Search for people, places, or things
+					+alert
+						|Search is missing a label
+
+				.form-group
+					label.sr-only(for="exampleSelect")
+						| What do you want to search for?
+					select.form-control#exampleSelect
+						option Select an option
+						option People
+						option Places
+						option Things
+
+
+					
+				.form-check
+					#star
+						+fa('star','fa-2x starFull')
+						+fa('star-o','fa-2x starOpen')
+					label(for="sampleRating")
+						| Star
+					input#sampleRating(type='checkbox' style="display:none")
+					+alert
+						|Rating (star) input is not reachable via the keyboard.
+
+				fieldset.form-check
+					legend How about our newsletter?
+					input.form-check-input2#newsLetterY(name="newsletter" value="Y" type="radio")
+					label.form-check-label2(for="newsLetterY") Yes
+
+					input.form-check-input2#newsLetterN(name="newsletter" value="N" type="radio")
+					label.form-check-label2(for="newsLetterN") No
+
+
+
+block extraCode
+	script.
+		$('#star').on('click',function(e){
+			e.preventDefault(); e.stopPropagation();
+			if($('#star .starFull:visible').length>0){
+				// starFull is showing
+				$('#star .starFull').hide();
+				$('#star .starOpen').show();
+
+			}
+			else{
+				$('#star .starFull').show();
+				$('#star .starOpen').hide();
+			}
+			$('#sampleRating').click();
+		})

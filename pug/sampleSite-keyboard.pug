@@ -1,0 +1,99 @@
+extends templates/testerPage.pug
+
+block head
+	style.
+		.btn-link:hover, .btn-link:focus{cursor:pointer;}
+		.crazyForm{position:relative; padding-bottom:130px}
+		.crazyForm .form-group{width:45%}
+
+block title
+	|Keyboard Navigation
+
+block checkFor
+	+checkFor('"Skip to content" link is visually available')
+	+checkFor('Access and control all actionable items')
+	+checkFor('Tab order makes logical sense')
+	+checkFor('Tabbed to (focus) items look visually different')
+
+block howToCheckURL
+	+howToCheck("h.ay7b6gs76aqw")
+
+
+block content
+	.row
+		.col
+			h2 Tab order
+			.crazyForm
+				button.btn.btn-primary(style="position:absolute;bottom:0") Submit
+		
+				.form-group.pull-right
+					label(for="exampleInputLastName") Last name
+					input.form-control#exampleInputLastName(type="text" placeholder="Last Name")
+
+				.form-group
+					label(for="exampleInputFirstName") First name
+					input.form-control#exampleInputFirstName(type="text" placeholder="First Name")
+
+				.form-group.pull-left
+					label(for="exampleInputAddress") Address
+					input.form-control#exampleInputAddress(type="text" placeholder="Address")
+
+				.form-group.pull-right
+					label(for="exampleInputCity") City
+					input.form-control#exampleInputCity(type="text" placeholder="City") 
+
+			+alert
+				p Tab order is incorrect.  The tab order should be:
+				ol
+					li First name
+					li Last name
+					li Address
+					li City
+					li Submit button
+
+			h2 Focus
+			p Consider the following list of links:
+			ol
+				li
+					+externalLink("https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=1" )
+						|Types of lotus flowers 
+					
+
+				li
+					span.btn-link#show_lotus_flower_modal(tabindex="0")
+						|View a group of lotus flowers
+						+faText("clone", '', '(modal)')
+					+alert
+						| "View a group of lotus flowers" cannot be activated via the keyboard.
+
+				li
+					+externalLink("https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=3")
+						|Growing lotus flowers
+
+				li.sr-only
+					+externalLink("https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=4")
+						|Super sneaky night flowers
+
+				+alert
+					|The fourth link can recieve focus but is not visible
+
+				li
+					+externalLink("https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=5")
+						|The colors of lotus flowers
+						
+
+				li.noIndicator
+					+externalLink("https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=6")
+						|Lotus flowers around the world
+
+					+alert
+						|The "Lotus flowers around the world" does not have a focus indicator.
+
+
+
+block extraCode
+	script
+		|	$('#show_lotus_flower_modal').click(function(){
+		|		openModal({'body':'<img src="../assets/images/group_flowers.jpg" alt="Group of lotus flowers">' })
+		|	})
+

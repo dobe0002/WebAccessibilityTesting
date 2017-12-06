@@ -1,0 +1,32 @@
+include generalMixins.pug
+
+doctype html  
+html(lang='en')  
+	head
+		title 
+			block title
+		+headIncludes
+		style
+			|.breadcrumb .active {margin-top: 0px;}
+		block head
+	body
+		+banner
+		+breadcrumbSamplePageHome
+		main.container
+			.row
+				.col
+					h1
+						block title
+					.card.bg-light
+						.card-body.row
+							.col-sm-2
+								block icon
+							.col-sm-10
+								block intro
+							
+			block content
+
+		+footer
+		+modal
+		+bodyIncludes
+		block extraCode

@@ -1,0 +1,188 @@
+<!DOCTYPE html  >
+<html lang="en"> 
+  <head>
+    <title> Tables
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
+    <link href="/assets/css/app.css" rel="stylesheet"/>
+    <style>
+      caption{
+      	color: #868e96;
+      	text-align: left;
+      	caption-side: top ;
+      }
+      td h3{margin-top:0;}
+      h2{margin-top:50px}
+      
+      
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
+        <li class="breadcrumb-item"><a href="sampleSite-index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
+        <li class="active breadcrumb-item">Tables
+        </li>
+      </ol>
+    </nav>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Tables
+          </h1>
+          <div class="card bg-light">
+            <div class="card-body">
+              <h2 class="h3">Things to check for:</h2>
+              <ul class="fa-ul">
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Data tables have column headings and row headings (if applicable).
+                </li>
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Layout tables do not contain any column or row headings.
+                </li>
+              </ul>
+              <ul class="list-inline testerActionButtons">
+                <li class="list-inline-item">
+                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                </li>
+                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.qtwxe3tlglg4" target="_blank">How to check <i class="fa fa-external-link " aria-hidden="true"></i><span class="sr-only">(new window)</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Children and their birthdates</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui eros, suscipit eget risus ut, vulputate feugiat neque. Vestibulum tincidunt dolor at augue rhoncus, at mollis tellus placerat. Integer vitae tellus et nibh suscipit vehicula non non ex. Vivamus convallis feugiat efficitur. Nunc malesuada mi nulla, nec sodales tellus efficitur varius. Donec aliquet, nibh in viverra ornare, ante sem commodo ligula, eu porta risus diam sit amet sem. Suspendisse potenti. Sed varius sed magna ac congue. Donec tincidunt mauris non blandit tincidunt. Donec a nisl at leo eleifend commodo non sed nunc.</p>
+          <table class="table">
+            <caption>Brook's children</caption>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Birth Day</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Alex</th>
+                <td>5</td>
+                <td>Jan. 5</td>
+              </tr>
+              <tr>
+                <th scope="row">Pat</th>
+                <td>7</td>
+                <td>Oct. 25</td>
+              </tr>
+              <tr>
+                <th scope="row">Ari</th>
+                <td>3</td>
+                <td>July 12</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2>A look at colors</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui eros, suscipit eget risus ut, vulputate feugiat neque. Vestibulum tincidunt dolor at augue rhoncus, at mollis tellus placerat. Integer vitae tellus et nibh suscipit vehicula non non ex. Vivamus convallis feugiat efficitur. Nunc malesuada mi nulla, nec sodales tellus efficitur varius. Donec aliquet, nibh in viverra ornare, ante sem commodo ligula, eu porta risus diam sit amet sem. Suspendisse potenti. Sed varius sed magna ac congue. Donec tincidunt mauris non blandit tincidunt. Donec a nisl at leo eleifend commodo non sed nunc.</p>
+          <table class="table">
+            <caption>Code used to represent colors in HTML and CSS</caption>
+            <thead>
+              <tr>
+                <th>Color</th>
+                <th>Hex Code</th>
+                <th>RGB Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Red</td>
+                <td>#ff0000</td>
+                <td>255,0,0</td>
+              </tr>
+              <tr>
+                <td>Green</td>
+                <td>#00ff00</td>
+                <td>0,255,0</td>
+              </tr>
+              <tr>
+                <td>Blue</td>
+                <td>#0000ff</td>
+                <td>0,0,255</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The color table is missing row columns.  In addition, no scope is set for the existing headers (should be set to "col" for column.)
+          </div>
+          <h2>Minnesota Apples</h2>
+          <table class="table">
+            <thead>
+              <tr style="font-weight:bold;">
+                <td>Name</td>
+                <td>Season</td>
+                <td>Description</td>
+              </tr>
+              <tr>
+                <td>Beacon</td>
+                <td>Early</td>
+                <td>Bright red apple with soft, juicy flesh and a slightly tart flavor. </td>
+              </tr>
+              <tr>
+                <td>Honeycrisp</td>
+                <td>Mid</td>
+                <td>Large, dappled red fruit with a well-balanced flavor, outstanding crispness and juiciness.</td>
+              </tr>
+              <tr>
+                <td>Frostbite</td>
+                <td>Late</td>
+                <td>Intensely sweet, firm and juicy flesh.</td>
+              </tr>
+            </thead>
+          </table>
+          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The Minnesota apples is both row and column headers.  Screenreaders will assume this is a layout table.
+          </div>
+          <h2>In today's news</h2>
+          <table role="none">
+            <tr>
+              <td style="padding:10px;">
+                <h3>Sample Story 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in condimentum nibh. Cras aliquet odio quam, in pretium nisi tempus nec ...</p>
+              </td>
+              <td style="padding:10px;">
+                <h3>Sample Story 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in condimentum nibh. Cras aliquet odio quam, in pretium nisi tempus nec ...</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer><small>By Kim Doberstein - University of Minnesota </small></footer>
+    <div class="modal" id="bs4Modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5">Modal title goes here</h2>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-times " aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            </button>
+          </div>
+          <div class="modal-body">Modal body text goes here.</div>
+          <div class="modal-footer">Modal footer buttons go here</div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/assets/javascripts/skipto.min.js"></script>
+    <script src="/assets/javascripts/app-min.js"></script>
+  </body>
+</html>

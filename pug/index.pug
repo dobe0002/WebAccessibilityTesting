@@ -1,0 +1,37 @@
+extends templates/homePage.pug
+
+block customStyles
+	|.card{margin-bottom:50px}
+
+block title
+	|Home
+
+block icon
+	img.img-fluid(src="assets/images/lotusBlossum.png" alt="")
+
+block intro
+	p.h1(style='margin-bottom:0') You Can Do This.
+	h1.h5(style='margin-top:0') Web Accessibility Testing for Everyone.
+	p Testing accessibility can be intimidating, let's make it easier so everyone can participate.
+	p
+		+testingDocLink('','View Handout','btn btn-primary btn-lg')
+
+block feature1
+	h2 Tools
+	p There are numerous free tools you can use in a browser to make testing for accessibility easier.
+	p.button-row
+		a.btn.btn-outline-dark(href="tools.html")
+			|View tools
+
+block feature2
+	h2 Sample Website
+	p
+		|Sample website to practice your web accessibility testing skills. Errors are clearly marked.
+	p.button-row
+		a.btn.btn-primary(href="sampleSite-index.html")
+			|View sample pages
+
+block feature3
+	h2 About
+	p
+		|This is the website was created by Kim Doberstein for the purpose of simplifing accessibility testing so it can be done often by anyone. It will catch the bigger accessibility issues, but won't catch them all.

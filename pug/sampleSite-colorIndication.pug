@@ -1,0 +1,78 @@
+extends templates/testerPage.pug
+
+block head
+	style.
+		.edits_highlight{padding:3px; display:inline-block; background-color: #d0ffcf}
+		.changes_highlight{padding:3px; display:inline-block; background-color: #e7e6ff}
+		.progress-bar{color:#000;}
+
+block title
+	|Color Indication
+
+block checkFor
+	+checkFor("Color is not the only visual means of conveying information.")
+
+block howToCheckURL
+	+howToCheck("h.i0k9ha8jvapo")
+
+block example
+	p(style="margin-top:40px; margin-left: 35px")
+		span(style="font-weight:bold") Example: 
+		a(href="https://www.wmata.com/schedules/maps/upload/system_map_color.pdf" target="_blank")
+			|Washington DC Metro Map (color PDF) 
+		|| 
+		a(href="https://www.wmata.com/schedules/maps/upload/system_map_BW.pdf" target="_blank")
+			|Washing DC Metro Map (black/white PDF)
+
+block content
+	.row
+		.col
+			h2 Sample Text
+			p
+				strong Note:
+			ul
+				li Edits are highlighted in 
+					span.edits_highlight green
+				li Changes are highlighted in 
+					span.changes_highlight blue
+
+						
+			p 
+				|Lorem ipsum dolor sit amet, 
+
+				span.edits_highlight consectetur adipiscing elit. 
+				
+				|Integer ex tellus, euismod eu faucibus et, porttitor non lectus. Duis maximus mi nec tincidunt pretium. Quisque vitae pharetra ex. In sem magna, gravida a purus at, 
+
+				span.changes_highlight placerat laoreet enim.
+
+				|Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec vestibulum, nisl ut pellentesque viverra, orci ipsum molestie mi, quis porta ligula nibh ut erat. Donec diam nulla, tincidunt ac metus non, ultrices scelerisque odio. Donec ultricies felis nec lorem lobortis, a porttitor metus euismod. 
+				
+				span.edits_highlight Curabitur vestibulum felis eros, et efficitur ex tincidunt a.
+
+				|Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+
+				span.changes_highlight Phasellus nec nibh at 
+
+				|mi congue sollicitudin non sed erat. Mauris id odio et nisl sodales iaculis.
+
+			+alert
+				|The color highlighting in the text paragraph is the only visual means of conveying information.
+
+			h2 Progress Bar Example
+
+			.progress
+				.progress-bar.bg-success(style="width: 35%")
+					span.sr-only 35% Complete (success)
+
+				.progress-bar.bg-warning.progress-bar-striped(style="width: 20%")
+					span.sr-only 20% Complete (warning)
+				
+			p(style="font-weight:bold") Key:
+			ul
+				li Complete: 
+					.progress-bar.bg-success(style="display:inline-block; width:50px; height:25px; float:none")
+
+				li In progress: 
+					.progress-bar.bg-warning.progress-bar-striped(style="display:inline-block; width:50px; height:25px; float:none")
+		

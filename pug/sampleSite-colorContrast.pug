@@ -1,0 +1,47 @@
+extends templates/testerPage.pug
+
+block head
+	style.
+		.list-group-item-success{color:#3a7b39;}
+		#largeTextExample .h3{font-weight: 200; }
+		#largeTextExample .h3, #largeTextExample .h4{margin-top:0;margin-bottom:0}
+		.list-group-item-secondary{color:#676767}
+
+block title
+	|Color Contrast
+
+block checkFor
+	+checkFor("At least 3:1 ratio for large scale text 18 point (24px) or 14 point(19px) bolded text")
+	+checkFor("At least 4.5:1 ratio for all other text")
+	
+block howToCheckURL
+	+howToCheck("h.n0blawx4c67y")
+
+block content
+	.row
+		.col
+			h2 Examples - plain text
+			ul.list-group
+				li.list-group-item.list-group-item-success Color combo 1
+				li.list-group-item.list-group-item-info Color combo 2 - 
+					a(href="http://google.com") Sample link
+				li.list-group-item.list-group-item-warning Color combo 3
+				li.list-group-item.list-group-item-danger Color combo 4
+				li.list-group-item.list-group-item-secondary Color combo 5 
+			+alert
+				| The following plain text combinations do not have enough contrast:
+				ul
+					li Color combo 1
+					li Color combo 2 - link only
+					li Color combo 5
+
+		
+			h2 Examples - large text
+			ul.list-group#largeTextExample
+				li.list-group-item.list-group-item-success.h4 Color combo 1 - large text
+				li.list-group-item.list-group-item-info.h3 Color combo 2 - large text - 
+					a(href="http://google.com") Sample link large text
+				li.list-group-item.list-group-item-warning.h4 Color combo 3 - large text
+				li.list-group-item.list-group-item-danger.h4 Color como 4 - large text
+				li.list-group-item.list-group-item-secondary.h4 Color combo 5 - large text
+

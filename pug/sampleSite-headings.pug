@@ -1,0 +1,53 @@
+extends templates/testerPage.pug
+
+block title
+	|Headings
+
+block checkFor
+	+checkFor("Headings show on a headings list")
+	+checkFor("The page title is a level 1 heading")
+	+checkFor("Headings are in order and do not skip levels")
+
+
+block howToCheckURL
+	+howToCheck("h.ey9zei51oc45")
+
+block content
+	.row
+		.col
+			h2 Classification
+			p
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo.
+
+			.subheading
+				h3 Taxonomy
+				p
+					|Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+
+				h3 Details
+				p
+					|Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+
+			.h2 Botany
+			+alert
+				|"Botany" is not coded as a heading and does not show in a headings list.
+			p
+				|Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+
+			.subheading
+				h3 Details
+				p
+					|Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+
+
+			h2 Uses
+			p
+				|Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+
+			.subheading
+				h4.h3 Edibles
+				+alert
+					|"Edibles" heading above is out of order.
+				p
+					|Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+

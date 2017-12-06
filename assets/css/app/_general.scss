@@ -1,0 +1,186 @@
+////////////// CONFIG //////////////////////
+.alert-warning{display:none}
+
+
+///////////// ELEMENTS ////////////////////
+ol, ul{
+	li{
+		margin-bottom:10px;
+	}
+}
+
+
+dl{
+	margin-left:20px;
+	dd{
+		margin-bottom:10px;
+	}
+}
+ul.nav-pills{
+	li{margin-bottom:0;}
+}
+
+
+table{
+	tbody{
+		tr{
+			th{font-weight: normal;}
+		}
+	}
+
+
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 22px;
+    margin-bottom: 11px;
+}
+////////////// OnFocus ///////////////////
+/*input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}*/
+ 
+input:focus, textarea:focus, a:focus, button:focus, *[tabindex='0']:focus, *[tabindex='-1']:focus {
+	
+	  box-shadow: 0 0 8px rgba(81, 203, 255, 1);
+	  //padding: 3px 0px 3px 3px;
+	  //margin: 5px 1px 3px 0px;
+	  //border: 1px solid rgba(81, 203, 238, 1);
+}
+.noIndicator a:focus{
+	box-shadow:none !important;
+	//border:none !important;
+	border-bottom-color: darken($gray-200, 10%) !important;
+	outline:none !important;
+}
+
+///////////// Site Header ////////////////
+
+header{
+border-top:15px solid #333;
+
+}
+
+.page-header{
+	border:none;
+	height:125px;
+	background-image: url("../images/lotusBackground.png");
+	background-position:right;
+	background-repeat: no-repeat;
+	margin-bottom:0;
+	padding-top:15px;
+	margin-top:0;
+
+	
+	small{
+		display:block;
+		margin-left:15px;
+		a,a:visited{
+			border:none;
+			color:$gray-light;
+
+		}
+	}
+	@media screen and (max-width: $screen-md)  {
+		margin-top:10px;
+	}
+	a,a:visited{
+		border:none;
+		color:$gray-900;
+	}
+}
+
+
+//////////// Footer /////////////////////
+footer, .siteFooter{
+	display:block;
+	    margin: 25px auto;
+	    margin-top:50px;
+    border-top: 1px solid #f0f0f0;
+    padding: 15px 0 15px 0;
+    
+    text-align: center;
+    font-size: 90%;
+}
+
+
+
+////////////// HOMEPAGE ////////////////
+.jumbrotronImg{
+	margin-top: -25px;
+	margin-left:-25px;
+}
+ .jumbotron{ 
+ 	h1{
+ 		font-size:36px;
+ 	}
+ 	small{display:block}
+
+ }
+/////////// BREADCRUMB ////////////////////
+.breadcrumb{
+    	.breadcrumb-item.active{
+    		color:#656b71 ;
+    	}
+		.active{margin-top:10px;}
+
+    }
+
+.bannerSpacer {
+  /*padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  background-color: #ccc;
+  border-radius: 0.25rem;
+  min-height:30px
+  */
+  border-top:1px solid #ccc;
+  min-height:50px;
+}
+///////////////// SAMPLE PAGES //////////////
+.testerActionButtons{	margin-top:30px
+}
+
+
+//////////////// MAIN CONTNET //////////////
+#main_content, main{
+	
+
+	.btn-link,a{    border-bottom: .08em solid  darken($gray-200, 10%); //rgba(0,0,0,.1);
+    padding-bottom: .08em;}
+
+    .btn-link:hover, .btn-link:focus, a:hover, a:focus{
+    	border-bottom-color: darken($link-color, 15%);
+    	text-decoration:none;
+    }
+    
+
+}
+.subheading{
+	margin-left: 50px;
+	margin-bottom: 50px;
+}
+
+.button-row{
+	text-align:center;
+}
+
+////////////////// MODAL //////////////
+.modal-backdrop{
+	opacity:0.5;
+}
+
+
+////////////////FA icon spacing ///////
+.alert, .breadcrumb-item{
+	.fa{
+		margin-right:10px
+	}
+}

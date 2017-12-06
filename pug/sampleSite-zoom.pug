@@ -1,0 +1,53 @@
+extends templates/testerPage.pug
+
+block head
+	style.
+		.img-fluid{max-height:262px}
+		.littleLotus{ display:inline-block; padding-right:10px}
+
+
+block title
+	|Zoom
+
+block checkFor
+	+checkFor('No loss of content or functionality when text is zoomed to 200%')
+
+block howToCheckURL
+	+howToCheck("h.gyswbi8d3bli")
+
+
+block content
+	.row
+		.col
+			h2 Lotus Pose
+	.row
+		.col-sm-4
+			img.img-fluid(src="assets/images/lotusYogaPose.png" alt="Lotus Yoga Pose")
+		.col-sm-8(style="border:1px solid #bbb")
+			p
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie. *** END ***
+
+	.row
+		.col
+			h2 Lotus Flowers
+	.row
+		.col-sm-4(styl="text-align:center")
+			img.img-fluid(src="assets/images/group_flowers.jpg" alt="Lotus flowers")
+		.col-sm-8(style="border:1px solid #bbb; max-height:300px;overflow:hidden")
+			p
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie. *** END ***
+	.row
+		.col
+			+alert
+				|When zoomed in the text is cut off in the second example (text next to image of the lotus flowers).
+			
+	.row
+		.col
+			h2 Poetry
+			p
+				img.littleLotus(src="assets/images/littleLotus.png" alt="The lotus") 
+				| dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie. *** END ***
+			+alert
+				|The first words "The lotus" either become "fuzzy" or don't zoom when other text is zoomed.
+
+block extraCode
