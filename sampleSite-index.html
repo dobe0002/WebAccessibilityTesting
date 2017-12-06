@@ -6,6 +6,15 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
     <link href="assets/css/app.css" rel="stylesheet"/>
     <style>.breadcrumb .active {margin-top: 0px;}</style>
+    <style>
+      .star{color:#009; padding-left:10px; padding-right:10px}
+      .notes{
+      	margin-top:30px;margin-bottom:30px;
+      
+      	color: #357034;
+      	background-color:#d0e6d5;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -20,8 +29,7 @@
     <nav class="container">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
-        <li class="active breadcrumb-item"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages
-        </li>
+        <li class="breadcrumb-item"><a href="sampleSite-index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
       </ol>
     </nav>
     <main class="container">
@@ -43,19 +51,39 @@
           </div>
         </div>
       </div>
+      <div class="card notes">
+        <div class="card-body">
+          <h2 class="sr-only">Testing notes</h2>
+          <p><strong>There are a couple of known "false positives" with this site.</strong></p>
+          <ul>
+            <li>In WAVE, there is an error for a "Broken skip link".  This link does function correctly.</li>
+            <li>In WAVE, there is an alert for an "Accesskey". This accesskey does not interfere with accessibility.</li>
+            <li>
+              In aXe, there are two color contrast errors about the page header.  This isn't an issue.
+              
+            </li>
+          </ul>
+        </div>
+      </div>
       <h2>List of Sample Pages</h2>
       <ul>
         <li><a href="sampleSite-headings.html">Headings</a></li>
-        <li><a href="sampleSite-images.html">Image Alternative Text </a></li>
-        <li><a href="sampleSite-tables.html">Data Tables </a></li>
-        <li><a href="sampleSite-forms.html">Forms </a></li>
+        <li><a href="sampleSite-images.html">Image Alternative Text </a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
+        </li>
+        <li><a href="sampleSite-tables.html">Data Tables </a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
+        </li>
+        <li><a href="sampleSite-forms.html">Forms </a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
+        </li>
         <li><a href="sampleSite-hyperlinks.html">Hyperlinks</a></li>
         <li><a href="sampleSite-colorIndication.html">Color Indication</a></li>
         <li><a href="sampleSite-colorContrast.html">Color Contrast</a></li>
-        <li><a href="sampleSite-keyboard.html">Keyboard Navigation</a></li>
+        <li><a href="sampleSite-keyboard.html">Keyboard Navigation</a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
+        </li>
         <li><a href="sampleSite-landmarks.html">Landmarks</a></li>
         <li><a href="sampleSite-zoom.html">Zoom</a></li>
       </ul>
+      <p><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>Considered most troublesome.
+      </p>
     </main>
     <footer><small>By Kim Doberstein - University of Minnesota </small></footer>
     <div class="modal" id="bs4Modal" tabindex="-1" role="dialog">

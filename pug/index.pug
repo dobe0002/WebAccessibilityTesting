@@ -1,7 +1,9 @@
 extends templates/homePage.pug
 
-block customStyles
-	|.card{margin-bottom:50px}
+block head
+	style.
+		.card{margin-bottom:50px}
+		.fa{padding-right:10px;}
 
 block title
 	|Home
@@ -20,8 +22,10 @@ block feature1
 	h2 Tools
 	p There are numerous free tools you can use in a browser to make testing for accessibility easier.
 	p.button-row
-		a.btn.btn-outline-dark(href="tools.html")
+		a.btn.btn-outline-dark(href="tools-index.html")
+			+fa('wrench')
 			|View tools
+
 
 block feature2
 	h2 Sample Website
@@ -29,6 +33,7 @@ block feature2
 		|Sample website to practice your web accessibility testing skills. Errors are clearly marked.
 	p.button-row
 		a.btn.btn-primary(href="sampleSite-index.html")
+			+fa('cogs')
 			|View sample pages
 
 block feature3

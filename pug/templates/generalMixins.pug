@@ -72,24 +72,33 @@ mixin breadcrumbHome
 					|Home
 			block
 
-mixin breadcrumbSamplePageHome
+
+mixin breadcrumbLandingHome(icon,text,href)
 	+breadcrumbHome
 		if block
 			li.breadcrumb-item
-				a(href="sampleSite-index.html")
-					+fa('cogs','fa-2x') 
-					| Sample Pages
+				a(href=href)
+					+fa(icon,'fa-2x') 
+					| #{text}
 		else
 			li.active.breadcrumb-item
-				+fa('cogs','fa-2x') 
-				
-				| Sample Pages
+				+fa(icon,'fa-2x') 
+					| #{text}
+		block
+
+mixin breadcrumbSamplePageHome
+	+breadcrumbLandingHome('cogs','Sample Pages','sampleSite-index.html')
 		block
 
 mixin breadcrumbSamplePage
 	+breadcrumbSamplePageHome
 		li.active.breadcrumb-item
 			block
+
+mixin breadcrumbToolPageHome
+	+breadcrumbLandingHome('wrench','Tools','tools-index.html')
+		block
+
 
 mixin checkFor(title)
 	li

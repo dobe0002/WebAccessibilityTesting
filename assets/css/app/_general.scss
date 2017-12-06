@@ -31,9 +31,10 @@ table{
 
 }
 
-h1, .h1, h2, .h2, h3, .h3 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     margin-top: 22px;
     margin-bottom: 11px;
+    font-family: "Roboto","Helvetica Neue", Arial, sans-serif
 }
 ////////////// OnFocus ///////////////////
 /*input[type=text], textarea {
@@ -82,19 +83,12 @@ border-top:15px solid #333;
 	small{
 		display:block;
 		margin-left:15px;
-		a,a:visited{
-			border:none;
-			color:$gray-light;
-
-		}
+		color:#666;
 	}
 	@media screen and (max-width: $screen-md)  {
 		margin-top:10px;
 	}
-	a,a:visited{
-		border:none;
-		color:$gray-900;
-	}
+	
 }
 
 
