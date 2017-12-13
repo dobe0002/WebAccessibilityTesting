@@ -20,8 +20,11 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-12">
+          <div class="col-sm-11">
             <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
+          </div>
+          <div class="col d-none d-lg-block">
+            <div class="header-background"></div>
           </div>
         </div>
       </div>
@@ -51,22 +54,9 @@
           </div>
         </div>
       </div>
-      <div class="card notes">
-        <div class="card-body">
-          <h2 class="sr-only">Testing notes</h2>
-          <p><strong>There are a couple of known "false positives" with this site.</strong></p>
-          <ul>
-            <li>In WAVE, there is an error for a "Broken skip link".  This link does function correctly.</li>
-            <li>In WAVE, there is an alert for an "Accesskey". This accesskey does not interfere with accessibility.</li>
-            <li>
-              In aXe, there are two color contrast errors about the page header.  This isn't an issue.
-              
-            </li>
-          </ul>
-        </div>
-      </div>
       <h2>List of Sample Pages</h2>
       <ul>
+        <li><a href="sampleSite-autoCheckers.html">Automatic Checkers</a></li>
         <li><a href="sampleSite-headings.html">Headings</a></li>
         <li><a href="sampleSite-images.html">Image Alternative Text </a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
         </li>

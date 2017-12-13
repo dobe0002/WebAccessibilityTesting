@@ -30,21 +30,12 @@ block intro
 		+testingDocLink('','How to test document')
 
 block content
-	.card.notes
-		.card-body
-			h2.sr-only Testing notes
-			p
-				strong There are a couple of known "false positives" with this site.
-			ul
-				li.
-					In WAVE, there is an error for a "Broken skip link".  This link does function correctly.
-				li.
-					In WAVE, there is an alert for an "Accesskey". This accesskey does not interfere with accessibility.
-				li.
-					In aXe, there are two color contrast errors about the page header.  This isn't an issue.
+	
 
 	h2 List of Sample Pages
 	ul
+		li
+			a(href="sampleSite-autoCheckers.html") Automatic Checkers
 		li
 			a(href="sampleSite-headings.html") Headings
 		li

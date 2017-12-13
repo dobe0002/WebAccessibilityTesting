@@ -1,7 +1,7 @@
 <!DOCTYPE html  >
 <html lang="en"> 
   <head>
-    <title> Video Captions and Transcripts
+    <title> Automated Checkers
     </title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
     <link href="assets/css/app.css" rel="stylesheet"/>
@@ -10,11 +10,8 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
+          <div class="col-sm-12">
             <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
           </div>
         </div>
       </div>
@@ -23,29 +20,29 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
         <li class="breadcrumb-item"><a href="sampleSite-index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
-        <li class="active breadcrumb-item">Video Captions and Transcripts
+        <li class="active breadcrumb-item">Automated Checkers
         </li>
       </ol>
     </nav>
     <main class="container">
       <div class="row">
         <div class="col">
-          <h1>Video Captions and Transcripts
+          <h1>Automated Checkers
           </h1>
           <div class="card bg-light">
             <div class="card-body">
               <h2 class="h3">Things to check for:</h2>
               <ul class="fa-ul">
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Videos have synchronized (or closed) captions
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Look at each violation/error and warning
                 </li>
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Audio-only files have a text transcript
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Run in multiple checkers
                 </li>
               </ul>
               <ul class="list-inline testerActionButtons">
                 <li class="list-inline-item">
                   <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
                 </li>
-                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.a46mwn92uany" target="_blank">How to check <i class="fa fa-external-link " aria-hidden="true"></i><span class="sr-only">(new window)</span></a>
+                <li class="list-inline-item">
                 </li>
               </ul>
             </div>
@@ -54,17 +51,36 @@
       </div>
       <div class="row">
         <div class="col">
-          <h2>Sample Video:</h2>
-          <iframe class="media-youtube-player" title="Welcome to the NEW Accessible U" src="//www.youtube.com/embed/jzzwYWtQTlw?wmode=opaque&amp;amp;modestbranding=1" frameborder="0" allowfullscreen="" id="fitvid0" style="width:700px; height:383px;"></iframe>
-          <h2>Audio:</h2>
-          <audio class="media-element file-default" controls="controls" data-fid="916" data-media-element="1">
-            <source src="https://accessibility.dl.umn.edu/sites/g/files/pua2331/f/media/improper-link-text.mp3"/>
-          </audio>
-          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The audio file is missing a transcript.
+          <h2>First Subheading</h2>
+          <p role="super_Kim_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Sed pretium libero in pharetra rutrum. Cras a ante viverra, fringilla tellus ut, blandit lorem.</p>
+          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The paragraph above has a made up role attribute value called "super_Kim_text". 
+          </div>
+          <button class="btn btn-primary btn-lg"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i>
+          </button>
+          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The button above doesn't have any text. 
+          </div>
+          <h3>Favorite Color</h3>
+          <p>
+            <label>
+              <input type="radio" name="color" value="maroon"/>Maroon
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="color" value="gold"/>Gold
+            </label>
+          </p>
+          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The radio buttons above are not contained in a fieldset tag.
           </div>
         </div>
       </div>
     </main>
+    <div class="container">
+      <p><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i> If there's nothing wrong with me... maybe there's something wrong with the universe.
+      </p>
+      <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The paragraph above is not contained in an ARIA landmark.
+      </div>
+    </div>
     <footer><small>By Kim Doberstein - University of Minnesota </small></footer>
     <div class="modal" id="bs4Modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">

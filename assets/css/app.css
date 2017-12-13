@@ -8061,12 +8061,13 @@ header {
 .page-header {
   border: none;
   height: 125px;
-  background-image: url("../images/lotusBackground.png");
   background-position: right;
   background-repeat: no-repeat;
   margin-bottom: 0;
   padding-top: 15px;
-  margin-top: 0; }
+  margin-top: 0;
+  position: relative;
+  z-index: 50; }
   .page-header small {
     display: block;
     margin-left: 15px;
@@ -8074,6 +8075,15 @@ header {
   @media screen and (max-width: 768px) {
     .page-header {
       margin-top: 10px; } }
+
+.header-background {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  background-image: url("../images/lotusBackground.png");
+  height: 124px;
+  width: 550px;
+  z-index: 25; }
 
 footer, .siteFooter {
   display: block;

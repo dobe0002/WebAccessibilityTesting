@@ -67,17 +67,20 @@ input:focus, textarea:focus, a:focus, button:focus, *[tabindex='0']:focus, *[tab
 header{
 border-top:15px solid #333;
 
+
 }
 
 .page-header{
 	border:none;
 	height:125px;
-	background-image: url("../images/lotusBackground.png");
+	//background-image: url("../images/lotusBackground.png");
 	background-position:right;
 	background-repeat: no-repeat;
 	margin-bottom:0;
 	padding-top:15px;
 	margin-top:0;
+	position:relative;
+	z-index:50;
 
 	
 	small{
@@ -88,8 +91,20 @@ border-top:15px solid #333;
 	@media screen and (max-width: $screen-md)  {
 		margin-top:10px;
 	}
+
+
 	
 }
+.header-background{
+		position:absolute;
+		top:0;
+		right:15px;
+		background-image: url("../images/lotusBackground.png");
+		height:124px;
+		width:550px;
+		z-index:25;
+
+	}
 
 
 //////////// Footer /////////////////////
