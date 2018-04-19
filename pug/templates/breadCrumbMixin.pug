@@ -1,0 +1,47 @@
+mixin breadcrumbs(pathToRoot)
+	- pathToRoot = pathToRoot || ''
+	- pathToHome = pathToRoot+"index.html"
+	nav.container(aria-label=Breadcrumbs)
+		ol.breadcrumb
+			li.breadcrumb-item
+				a(href=pathToHome)
+					+fa('home','fa-2x')
+					|Home
+			block
+
+
+mixin breadcrumbLandingHome(icon,text,href,pathToRoot)
+	+breadcrumbs(pathToRoot)
+		li.breadcrumb-item
+			a(href=href)
+				+fa(icon,'fa-2x') 
+				| #{text}
+		block
+ 
+
+
+mixin breadcrumbLandingHomeOLD(icon,text,href,pathToRoot)
+	+breadcrumbs(pathToRoot)
+		if block
+			li.breadcrumb-item
+				a(href=href)
+					+fa(icon,'fa-2x') 
+					| #{text}
+		else
+			li.active.breadcrumb-item
+				+fa(icon,'fa-2x') 
+					| #{text}
+		block
+ 
+
+mixin breadcrumbSamplePage
+	+breadcrumbLandingHome('cogs','Sample Pages','index.html','../')
+		if block
+			li.active.breadcrumb-item
+				block
+
+mixin breadcrumbToolPageHome
+	+breadcrumbLandingHome('wrench','Tools','index.html','../')
+	if block
+		li.active.breadcrumb-item
+			block

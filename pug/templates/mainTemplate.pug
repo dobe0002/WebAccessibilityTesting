@@ -1,0 +1,27 @@
+include generalMixins.pug
+include breadCrumbMixin.pug
+
+doctype html  
+html(lang='en')  
+	head
+		title 
+			|Web Accessibility Testing - 
+			block title
+		block headIncludes
+			+headIncludes('')
+
+		block head
+	body
+		+banner
+		block breadCrumbs
+			+breadcrumbs(pathToRoot)
+		main.container
+			block contentContainer
+
+		block outsideLandmark
+		+footer
+		+modal
+		block bodyIncludes
+			+bodyIncludes('')
+		block extraCode
+			

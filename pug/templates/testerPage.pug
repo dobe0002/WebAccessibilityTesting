@@ -1,38 +1,34 @@
-include generalMixins.pug
+extends mainTemplate.pug
 
-doctype html  
-html(lang='en')  
-	head
-		title 
-			block title
-		+headIncludes
+block title
+block headIncludes
+	+headIncludes('../')
 
-		block head
-	body
-		+banner
-		+breadcrumbSamplePage
-			block title
-		main.container
-			.row
-				.col
-					h1
-						block title
-					.card.bg-light
-						.card-body
-							h2.h3 Things to check for:
-							ul.fa-ul
-								block checkFor
-							block example
-							ul.list-inline.testerActionButtons
-								li.list-inline-item
-									button.btn.btn-outline-dark.btn-sm.toggle-warnings-btn
-										|Toggle hints
-								li.list-inline-item
-									block howToCheckURL
-			block content
+block append head
+block breadCrumbs
+	+breadcrumbSamplePage
+		block title
 
-		block outsideLandmark
-		+footer
-		+modal
-		+bodyIncludes
-		block extraCode
+block contentContainer
+	.row
+		.col
+			h1
+				block title
+			.card.bg-light
+				.card-body
+					h2.h3 Things to check for:
+					ul.fa-ul
+						block checkFor
+					block example
+					ul.list-inline.testerActionButtons
+						li.list-inline-item
+							button.btn.btn-outline-dark.btn-sm.toggle-warnings-btn
+								|Toggle hints
+						li.list-inline-item
+							block howToCheckURL
+	block content
+
+block outsideLandmark
+block bodyIncludes
+	+bodyIncludes('../')
+block extraCode
