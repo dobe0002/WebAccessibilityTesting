@@ -1,0 +1,24 @@
+extends ../templates/testerPage.pug
+
+block title
+	|Video Captions and Transcripts
+
+block checkFor
+	+checkFor("Videos have synchronized (or closed) captions")
+	+checkFor("Audio-only files have a text transcript")
+
+block howToCheckURL
+	+howToCheck("h.a46mwn92uany")
+	
+block content
+	.row
+		.col
+			h2 Sample Video:
+			iframe(class="media-youtube-player" title="Welcome to the NEW Accessible U" src="//www.youtube.com/embed/jzzwYWtQTlw?wmode=opaque&amp;modestbranding=1" frameborder="0" allowfullscreen="" id="fitvid0" style="width:700px; height:383px")
+
+			h2 Audio:
+			audio(class="media-element file-default" controls="controls" data-fid="916" data-media-element="1")
+				source(src="https://accessibility.dl.umn.edu/sites/g/files/pua2331/f/media/improper-link-text.mp3")
+
+			+alert
+				|The audio file is missing a transcript.

@@ -1,0 +1,84 @@
+extends ../templates/testerPage.pug
+
+
+block head
+	style.
+		.lotusBud{
+			background-image:url(../assets/images/lotusBud.png);
+			background-repeat: no-repeat;
+			background-size: 115px 115px;
+			min-height:115px;
+			padding-left:135px;
+		}
+
+		.lotusPose{
+			background-image:url(../assets/images/lotusYogaPose.png);
+			background-repeat: no-repeat;
+			min-height:262px; 
+			padding-left:370px;
+		}
+
+block title
+	|Images
+
+block checkFor
+	+checkFor("Images have appropriate alternative text")
+	+checkFor("Images applied via CSS have appropriate alternative text")
+
+block howToCheckURL
+	+howToCheck("h.4ub2dj2zjgt7")
+
+block content
+	.row
+		.col
+			h2 Traditional Images 
+				small (using image tag)
+
+			p
+				img(src="../assets/images/Lotus_Flower_text.png")
+			+alert
+				|"Lotus Flower" text image is missing an alt text.  The alt text should be set to "Lotus Flower".
+
+			p
+				img(src="../assets/images/lotusBud.png" alt="" style="float:left; margin:20px; height:115px; width:115px; margin-top:0")
+
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae ante semper, bibendum ex id, auctor tortor. Maecenas pellentesque enim in posuere varius. Proin ut ligula ex. Donec ut accumsan sapien. Vestibulum ac tortor orci. Quisque dapibus massa quis elit pharetra faucibus. Duis auctor pharetra lorem. 
+			
+			p(style="clear:both;padding-top:30px;") 
+				img(src="../assets/images/lotusYogaPose.png" alt="Lotus Yoga Pose" style="float:left; margin:20px;margin-top:0")
+			
+				|From the common sitting down on the floor (Indian Style, Cross-legged) position, one foot is placed on top of the opposite thigh with its sole facing upward and heel close to the abdomen. The other foot is then lifted up slowly and placed on the opposite thigh in a symmetrical way. The knees are in contact with the ground.
+
+			p(style="clear:both;padding-top:30px;") 
+				img(src="../assets/images/lotusBlossum.png" style="float:left; margin:20px; height:115px; width:115px; margin-top:0px")
+
+				+alert
+					|"Lotus Flower" image is missing an alt text.  The alt text should be set to "" (empty).
+
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae ante semper, bibendum ex id, auctor tortor. Maecenas pellentesque enim in posuere varius. Proin ut ligula ex. Donec ut accumsan sapien. Vestibulum ac tortor orci. Quisque dapibus massa quis elit pharetra faucibus. Duis auctor pharetra lorem. 
+
+			h2(style="clear:both") CSS Images
+				small (using CSS)
+
+			p Some sample links:
+			ul
+				li
+					a(href="http://my.favorite.pdf")
+						+fa('file-pdf-o','fa-3x')
+					+alert
+						|"PDF" image is missing an alt text.  The alt text should be set to "PDF document".
+				li
+					a(href="http://umn.edu")
+						+faText('university','fa-3x','U of M Homepage')
+		
+			p.lotusBud(style="clear:both;margin-top:30px;") 
+
+				|Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae ante semper, bibendum ex id, auctor tortor. Maecenas pellentesque enim in posuere varius. Proin ut ligula ex. Donec ut accumsan sapien. Vestibulum ac tortor orci. Quisque dapibus massa quis elit pharetra faucibus. Duis auctor pharetra lorem. 
+
+			p.lotusPose(style="clear:both;margin-top:30px;") 
+				+alert
+					|"Lotus Pose image is missing an alt text.  The alt text should be set to "Lotus Pose".
+					
+				|From the common sitting down on the floor (Indian Style, Cross-legged) position, one foot is placed on top of the opposite thigh with its sole facing upward and heel close to the abdomen. The other foot is then lifted up slowly and placed on the opposite thigh in a symmetrical way. The knees are in contact with the ground.
+
+			

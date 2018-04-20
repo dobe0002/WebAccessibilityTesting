@@ -1,37 +1,32 @@
-include generalMixins.pug
+extends mainTemplate.pug
 
-doctype html  
-html(lang='en')  
-	head
-		title 
-			block title
-		+headIncludes
-		
-		block head
-	body
-		+banner
-		.container
-			.bannerSpacer 
 
-		main.container
-			.row
-				.col
-					.card.bg-light
-						.card-body.row
-							.col-sm-3
-								block icon
-							.col-sm-9
-								block intro
+
+block head
+
+block title
+	|Home
+block breadCrumbs
+
+block contentContainer
+	.bannerSpacer
+	.row
+		.col
+			.card.bg-light
+				.card-body.row
+					.col-sm-3
+						block icon
+					.col-sm-9
+						block intro
 							
-			.row
-				.col
-					block feature1
-				.col
-					block feature2
-				.col
-					block feature3
+	.row
+		.col
+			block feature1
+		.col
+			block feature2
+		.col
+			block feature3
 
-		+footer
-		+modal
-		+bodyIncludes
-		block extraCode
+	.row
+		.col
+			block about

@@ -1,0 +1,30 @@
+extends ../templates/landingPage.pug
+
+
+block title
+	|Ajax Test
+
+block head
+
+block breadCrumbs
+	+breadcrumbWave
+		|Ajax Test
+
+
+block icon
+	
+
+block intro
+	p.
+		The page will load content below after page load.
+
+
+block content
+	h2 The Lotus Flower
+	#contentGoesHere
+
+
+block extraCode
+	script.
+		$( "#contentGoesHere" ).load( "pageContent.html");
+

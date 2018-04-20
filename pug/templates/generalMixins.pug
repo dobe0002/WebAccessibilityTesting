@@ -55,52 +55,20 @@ mixin banner
 				.col.d-none.d-lg-block
 					.header-background
 
-mixin headIncludes
+mixin headIncludes(pathToRoot)
+	- pathToRoot = pathToRoot || ''
+	- var assetsPath = pathToRoot+"assets/css/app.css"
 	link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet")
-	link(href="assets/css/app.css" rel="stylesheet")
+	link(href=assetsPath rel="stylesheet")
 
-mixin bodyIncludes
+mixin bodyIncludes(pathToRoot)
+	- pathToRoot = pathToRoot || ''
+	- pathToSkipTo = pathToRoot+"assets/javascripts/skipto.min.js"
+	- pathToJS = pathToRoot+"assets/javascripts/app-min.js"
 	script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
-	script(src="assets/javascripts/skipto.min.js")
-	script(src="assets/javascripts/app-min.js")
-
-
-mixin breadcrumbHome
-	nav.container(aria-label=Breadcrumbs)
-		ol.breadcrumb
-			li.breadcrumb-item
-				a(href="../index.html")
-					+fa('home','fa-2x') 
-					|Home
-			block
-
-
-mixin breadcrumbLandingHome(icon,text,href)
-	+breadcrumbHome
-		if block
-			li.breadcrumb-item
-				a(href=href)
-					+fa(icon,'fa-2x') 
-					| #{text}
-		else
-			li.active.breadcrumb-item
-				+fa(icon,'fa-2x') 
-					| #{text}
-		block
-
-mixin breadcrumbSamplePageHome
-	+breadcrumbLandingHome('cogs','Sample Pages','sampleSite-index.html')
-		block
-
-mixin breadcrumbSamplePage
-	+breadcrumbSamplePageHome
-		li.active.breadcrumb-item
-			block
-
-mixin breadcrumbToolPageHome
-	+breadcrumbLandingHome('wrench','Tools','tools-index.html')
-		block
+	script(src=pathToSkipTo)
+	script(src=pathToJS)
 
 
 mixin checkFor(title)

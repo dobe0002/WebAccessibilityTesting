@@ -1,0 +1,62 @@
+extends ../templates/landingPage.pug
+
+
+block head
+	style.
+		.star{color:#009; padding-left:10px; padding-right:10px}
+		.notes{
+			margin-top:30px;margin-bottom:30px;
+		
+			color: #357034;
+			background-color:#d0e6d5;
+		}
+block title
+	|Sample Pages
+
+block breadCrumbs
+	+breadcrumbSamplePage
+
+block icon
+	+fa('cogs','fa-5x')
+
+block intro
+	p
+		|This mini-site contains pages for demonstrating and practicing web accessibility testing. 
+	p
+		|Because this is a "demo" site, the pages are "rough", have accessibility errors, and contain nonsensical text.
+	p
+		+testingDocLink('','How to test document')
+
+block content
+	h2 List of Sample Pages
+	ul
+		li
+			a(href="autoCheckers.html") Automatic Checkers
+		li
+			a(href="headings.html") Headings
+		li
+			a(href="images.html") Image Alternative Text 
+			+faText('star','star','(most troublesome)')
+		li
+			a(href="tables.html") Data Tables 
+			+faText('star','star','(most troublesome)')
+		li
+			a(href="forms.html") Forms 
+			+faText('star','star','(most troublesome)')
+		li
+			a(href="hyperlinks.html") Hyperlinks
+		li
+			a(href="colorIndication.html") Color Indication
+		li
+			a(href="colorContrast.html") Color Contrast
+		li
+			a(href="keyboard.html") Keyboard Navigation
+			+faText('star','star','(most troublesome)')
+		li
+			a(href="landmarks.html") Landmarks
+		li
+			a(href="zoom.html") Zoom
+
+	p
+		+faText('star','star','(most troublesome)')
+		| Considered most troublesome.

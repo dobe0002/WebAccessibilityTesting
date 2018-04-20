@@ -139,6 +139,21 @@ footer, .siteFooter{
     		color:#656b71 ;
     	}
 		.active{margin-top:10px;}
+		.waveLogo{
+			width: 30px;
+			height: 28px;
+			margin-top:2px;
+			display: inline-block;
+			margin-right: 10px;
+			background-image: url(../images/wave/waveLink.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+		a:hover{
+			.waveLogo{
+				background-image: url(../images/wave/waveHover.png);
+			}
+		}
 
     }
 
