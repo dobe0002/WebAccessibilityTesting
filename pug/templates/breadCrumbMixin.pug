@@ -20,20 +20,6 @@ mixin breadcrumbLandingHome(icon,text,href,pathToRoot)
  
 
 
-mixin breadcrumbLandingHomeOLD(icon,text,href,pathToRoot)
-	+breadcrumbs(pathToRoot)
-		if block
-			li.breadcrumb-item
-				a(href=href)
-					+fa(icon,'fa-2x') 
-					| #{text}
-		else
-			li.active.breadcrumb-item
-				+fa(icon,'fa-2x') 
-					| #{text}
-		block
- 
-
 mixin breadcrumbSamplePage
 	+breadcrumbLandingHome('cogs','Sample Pages','index.html','../')
 		if block
@@ -45,3 +31,13 @@ mixin breadcrumbToolPageHome
 	if block
 		li.active.breadcrumb-item
 			block
+
+mixin breadcrumbWave
+	+breadcrumbs('../')
+		li.breadcrumb-item
+			a(href='index.html')
+				span.waveLogo
+				| Wave
+		if block
+			li.active.breadcrumb-item
+				block

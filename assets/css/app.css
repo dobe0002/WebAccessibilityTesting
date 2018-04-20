@@ -8110,6 +8110,19 @@ footer, .siteFooter {
 .breadcrumb .active {
   margin-top: 10px; }
 
+.breadcrumb .waveLogo {
+  width: 30px;
+  height: 28px;
+  margin-top: 2px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url(../images/wave/waveLink.png);
+  background-size: contain;
+  background-repeat: no-repeat; }
+
+.breadcrumb a:hover .waveLogo {
+  background-image: url(../images/wave/waveHover.png); }
+
 .bannerSpacer {
   /*padding: 0.75rem 1rem;
   margin-bottom: 1rem;

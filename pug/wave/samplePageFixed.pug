@@ -1,0 +1,111 @@
+extends ../templates/landingPage.pug
+
+block head
+	style.
+		.testerActionButtons{display:none}
+		.card-body.row .col-sm-2 {display:none}
+		.text-muted{color:#5b6167}
+		form{margin-left:30px; margin-bottom:50px}
+
+block title
+	|Sample page to test in WAVE - No issues
+
+block breadCrumbs
+	+breadcrumbWave
+		|Sample test page to test in WAVE - No issues
+
+block intro
+	p.
+		This a test page
+	p.
+		#[strong Note:] All known accessibility issues have been fixed and this page should produce a "clean" WAVE report.
+
+ 
+
+block content
+	.row
+		.col
+			h2
+				img(src="../assets/images/Lotus_Flower_text.png" style="margin-top:20px" alt="Lotus Flower Information")
+			p
+				img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Sacred_lotus_Nelumbo_nucifera.jpg/256px-Sacred_lotus_Nelumbo_nucifera.jpg" style="float:left; margin-right:20px; width:160px" alt="")
+				.
+					Nelumbo nucifera, also known as Indian lotus, sacred lotus, bean of India, Egyptian bean or simply lotus, is one of two extant species of aquatic plant in the family Nelumbonaceae. The Linnaean binomial Nelumbo nucifera Gaertn. is the currently recognized name for this species, which has been classified under the former names, Nelumbium speciosum Willd. and Nymphaea nelumbo, among others. (These names are obsolete synonyms and should be avoided in current works.) This plant is an aquatic perennial. Under favorable circumstances its seeds may remain viable for many years, with the oldest recorded lotus germination being from that of seeds 1,300 years old recovered from a dry lakebed in northeastern China.
+	.row
+		.col
+			h3 Botany
+			p The roots of lotus are planted in the soil of the pond or river bottom, while the leaves float on top of the water surface or are held well above it ...
+			p
+				a(href="https://en.wikipedia.org/wiki/Nelumbo_nucifera#Botany") Read more #[span.sr-only about botany]
+		.col
+			h3 Cultivation
+			p The Sacred Lotus grows in water up to 2.5 m (8 ft). The minimum water depth should not be lower than 30 cm (12 in). In colder climates such a low water level, which heats up more quickly . . .
+			p
+				a(href="https://en.wikipedia.org/wiki/Nelumbo_nucifera#Cultivation") Read more #[span.sr-only about cultivation]
+		.col
+			h3 Use
+			p Shows high potential for usage in wastewater treatment removing polluting compounds and heavy metals. It is able to grow in variable water conditions ...
+			p
+				a(href="https://en.wikipedia.org/wiki/Nelumbo_nucifera#Use") Read more #[span.sr-only use]
+	
+	.row
+		.col
+			h2 Catalog
+			p.sr-only
+				img(src="../assets/images/lotusYogaPose.png" alt="Lotus Yoga pose")
+
+			p Let us send you more information about lotus flowers.
+			h3.h4 US Post
+			form
+				.row
+					.col
+						.form-group
+							label(for="exampleInputFirstName") First name
+							input.form-control#exampleInputFirstName(type="text" placeholder="First Name")
+						
+					.col
+						.form-group
+							label(for="exampleInputLastName") Last name
+							input.form-control#exampleInputLastName(type="text" placeholder="Last Name")
+
+				.row
+					.col
+						.form-group
+							label(for="exampleInputAddress") Address
+							input.form-control#exampleInputAddress(type="text" placeholder="Address" )
+					
+					.col
+						.form-group
+							label(for="exampleInputCity") City
+							input.form-control#exampleInputCity(type="text" placeholder="City") 
+				.row
+					.col
+						button.btn.btn-primary() Submit
+
+			h3.h4 Electronic
+			form.form-inline
+				input.form-control.specialLabel#exampleInputSearch(type="text" placeholder="Email Address" aria-label="email" aria-describedBy="emailHelp")
+				button.btn.btn-primary Submit
+
+				p(style="width:100%")
+					small.form-text.text-muted#emailHelp
+							|Only enter 1 email address.
+
+			h2 Social Media
+			ul.list-inline
+				li.list-inline-item
+					a(href="http://facebook.com") 
+						+faText("facebook-official", "fa-5x", "Facebook")
+
+				li.list-inline-item
+					a(href="https://www.snapchat.com/") 
+						+faText("snapchat-square", "fa-5x", "Snapchat")
+				li.list-inline-item
+					a(href="http://twitter.com") 
+						+faText("twitter-square", "fa-5x", "Twitter")
+				li.list-inline-item
+					a(href="https://www.instagram.com/") 
+						+faText("instagram", "fa-5x", "Instagram")
+
+			p(style="text-align:center")
+				img(src="../assets/images/lotusBlossum.png" alt="End of page" style="width:70px")
