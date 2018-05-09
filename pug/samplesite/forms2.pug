@@ -1,0 +1,199 @@
+extends ../templates/testerPage.pug
+
+
+block head
+	style.
+		.btn-link:hover, .btn-link:focus{cursor:pointer;}
+		.crazyForm{position:relative; padding-bottom:30px}
+		.crazyForm .form-group{width:45%}
+		#star{
+			display:inline-block;
+			color:#ff9800;
+		}
+		#star .starFull{display:none;}
+		h2{margin-top:50px}
+		label{padding-right:20px;}
+		.form-check-input {margin-left:0}
+		.form-check{margin-left:20px;}
+		legend{font-size:1rem; padding-top:20px}
+
+block title
+	|Forms - More Issues
+
+block checkFor
+	+checkFor('Form labels are associated with their elements.')
+	+checkFor('You can easily get to and control all actionable items only using the keyboard.')
+	+checkFor('The tab order of form elements make sense.')
+	+checkFor('A form element that has “focus” ( tabbed or arrowed to) looks visually different.')
+	+checkFor('Help and error text is connected to the form field.')
+block example
+
+block howToCheckURL
+	+externalLink('https://docs.google.com/document/d/1wnpSZfZQbxMEK4QC635E4IL2GZK4p0eaECKZ3oIti7s/', 'btn btn-outline-dark btn-sm')
+		|How to check
+
+block content
+	.row
+		.col
+			h2 Address
+			form.crazyForm
+				button.btn.btn-primary(style="position:absolute;bottom:0") Submit
+		
+				.form-group.pull-right
+					label(for="exampleInputLastName") Last name
+					input.form-control#exampleInputLastName(type="text" placeholder="Last Name")
+
+				.form-group
+					label First name
+					input.form-control#exampleInputFirstName(type="text" placeholder="First Name")
+				+alert
+					| The "First name" label is not associated with its text field.
+
+				.form-group.pull-left
+					label(for="exampleInputAddress") Address
+					input.form-control#exampleInputAddress(type="text" placeholder="Address" )
+					
+
+				.form-group.pull-right
+					label(for="exampleInputCity") City
+					input.form-control#exampleInputCity(type="text" placeholder="City") 
+
+				.form-group
+					#star
+						+fa('star','fa-2x starFull')
+						+fa('star-o','fa-2x starOpen')
+					label(for="sampleRating")
+						| Are you a super star?
+					input#sampleRating(type='checkbox' style="display:none")
+					+alert
+						|Rating (star) input is not reachable via the keyboard.
+
+			+alert
+				p Tab order is incorrect.  The tab order should be:
+				ol
+					li First name
+					li Last name
+					li Address
+					li City
+					li Star
+					li Submit button
+
+			hr
+			h2 Search
+			form
+				.form-group
+					input.form-control.specialLabel#exampleInputSearch(type="text" placeholder="Search")
+
+					+alert
+						|Search is missing a label
+
+				.form-group
+					label.sr-only(for="exampleSelectType")
+						| What do you want to search for?
+					select.form-control#exampleSelectType
+						option What do you want to search for?
+						option People
+						option Places
+						option Things
+				.form-group
+					select.form-control#exampleSelectDate(aria-label="Date range")
+						option Select a date range
+						option Within the last day
+						option Within the last week
+						option Within the last month
+						option Over a month ago
+				
+			hr
+			h2 Catalog
+			fieldset
+				legend Flowers
+				.form-check
+					input.form-check-input#tulips(name="flowers" value="Tulips" type="checkbox")
+					label.form-check-label(for="tulips") Tulips
+				.form-check
+					input.form-check-input#roses(name="flowers" value="Roses" type="checkbox")
+					label.form-check-label(for="roses") Roses
+				.form-check
+					input.form-check-input#daisies(name="flowers" value="Daisies" type="checkbox")
+					label.form-check-label(for="daisies") Daisies
+
+			div
+				div Color
+				.form-check
+					input.form-check-input#red(name="color" value="Red" type="checkbox")
+					label.form-check-label(for="red") Red
+				.form-check
+					input.form-check-input#yellow(name="color" value="Yellow" type="checkbox")
+					label.form-check-label(for="yellow") Yellow
+				.form-check
+					input.form-check-input#purple(name="color" value="Purple" type="checkbox")
+					label.form-check-label(for="purple") Purple
+				+alert
+					| The color checkboxes are missing a fieldset and legend.
+				
+			
+			.form-group
+					label(for="email") Email
+					input.form-control#email(type="text" placeholder="" style="width:300px" aria-describedby="emailHelpBlock") 
+					small#emailHelpBlock(class="form-text text-muted") Email where your catalog will be sent.
+
+			.form-group
+					label(for="climate") Climate
+					input.form-control#climate(type="text" placeholder="" style="width:300px" ) 
+					small#climateHelpBlock(class="form-text text-muted") Describe your climate including average temperature.
+			+alert
+				| The "Climate" field does not have the directions associated with the textbox (field element).
+
+			hr
+			h2 Gardening Experience (Required elements are marked with a "*")
+			.form-group
+				label(for="yearsExperience") * Number of years gardening
+				input.form-control#yearsExperience(type="text" placeholder="" style="width:300px" required="true") 
+
+			.form-group
+				label(for="favoriteFlower") * Favorite flower
+				input.form-control#favoriteFlower(type="text" placeholder="" style="width:300px" ) 
+			+alert
+				| The "Favorite Flower" field is missing the required='true' or aria-required='true' attribute.
+
+			.form-group
+				label(for="typesOfPlants") * Types of plants grown
+				input.form-control#typesOfPlants.is-invalid(type="text" placeholder="" style="width:300px" required='true' aria-describedby="typesOfPlantsError" aria-invalid='true') 
+				.invalid-feedback#typesOfPlantsError Error: Please enter a number.
+
+			div(style="height:30px")
+
+			.form-check(style="margin-left:0")
+				input.form-check-input#codeOfConduct.is-invalid(type="checkbox" placeholder="" style="width:300px" required='true') 
+				label.form-check-label(for="codeOfConduct") * Agree to gardner's code of conduct
+				.invalid-feedback#codeOfConduct(style="display:block") Error: Please check the box to continue.
+
+			+alert
+				| The code of conduct check box is missing the aria-invalid='true' attribute and the error message is not connected to the checkbox via the aria-describedby attribute.
+
+			div(style="height:30px")
+
+			.form-group
+				label(for="goals") * Your gardening goals for the next year
+				input.form-control#goals.is-invalid(type="text" placeholder="" style="width:300px" required='true'  aria-invalid='true') 
+	
+
+			+alert
+				| Only color is used to represent that there is an error on the goals text field.
+
+block extraCode
+	script.
+		$('#star').on('click',function(e){
+			e.preventDefault(); e.stopPropagation();
+			if($('#star .starFull:visible').length>0){
+				// starFull is showing
+				$('#star .starFull').hide();
+				$('#star .starOpen').show();
+
+			}
+			else{
+				$('#star .starFull').show();
+				$('#star .starOpen').hide();
+			}
+			$('#sampleRating').click();
+		})
