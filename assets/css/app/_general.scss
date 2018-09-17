@@ -1,5 +1,8 @@
 ////////////// CONFIG //////////////////////
-.alert-warning{display:none}
+.alert-warning, .alert-info{
+	display:none;
+	margin-top:1em;
+}
 
 
 ///////////// ELEMENTS ////////////////////
@@ -9,6 +12,7 @@ ol, ul{
 	}
 }
 
+nav ul li{margin-bottom:0}
 
 dl{
 	margin-left:20px;
@@ -72,7 +76,7 @@ border-top:15px solid #333;
 
 .page-header{
 	border:none;
-	height:125px;
+	min-height:125px;
 	//background-image: url("../images/lotusBackground.png");
 	background-position:right;
 	background-repeat: no-repeat;
@@ -183,8 +187,9 @@ footer, .siteFooter{
     .btn-link:hover, .btn-link:focus, a:hover, a:focus{
     	border-bottom-color: darken($link-color, 15%);
     	text-decoration:none;
-    }
-    
+	}
+	nav a{border-bottom:0;padding-bottom:0}
+	
 
 }
 .subheading{

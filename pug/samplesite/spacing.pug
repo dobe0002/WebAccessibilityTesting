@@ -1,0 +1,88 @@
+extends ../templates/testerPage.pug
+
+block head
+	style.
+		.sampleText{
+			border:1px solid #666;
+			padding:20px;
+			line-height:120%;
+			
+		}
+
+		#text1,#text2{
+			height:285px;
+			width:650px;
+		}
+		#text2{
+			overflow:hidden;
+		}
+
+
+		#text3{
+			min-height:285px;
+			max-width:650px
+		}
+		.lastLine{
+			font-weight:bold;
+			color:#090;
+			
+		}
+		.lastLine:after{content:"This is the last line."}
+
+block title
+	|Spacing
+
+block checkFor
+	p Content is still visible/available when:
+	+checkFor("Line height is set to 1.5 times the font size.")
+	+checkFor("Paragraph spacing is set to 2 times the font size.")
+	+checkFor("Letter spacing is set to 0.12 times the font size.")
+	+checkFor("Word spacing is set to 0.16 times the font size.")
+	
+block howToCheckURL
+	//-
+		+howToCheck("h.n0blawx4c67y")
+
+block content
+	
+	.row
+		.col
+			+info
+				p Use the following CSS to check spacing:
+				p * { line-height:1.5em !important} /* Line spacing */
+				p p {margin-bottom:2em !important} /* Paragraph spacing */
+				p * {letter-spacing: 0.12em !important} /* Letter spacing */
+				p * {word-spacing: 0.16em !important;} /* Word spacing */
+
+
+			h2 Sample text 1
+
+			#text1.sampleText 
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia eleifend congue. In hac habitasse platea dictumst. Phasellus sapien ex, auctor sed purus eget, dignissim feugiat lorem. Morbi fermentum at augue a tristique. Praesent dui dolor, imperdiet id tempor eget, vehicula a leo. Fusce luctus magna ac nunc facilisis viverra. 
+				p Curabitur sit amet suscipit nibh. Fusce dignissim imperdiet erat vel congue. Integer varius nunc id sagittis porta. Quisque euismod libero id neque pretium, et venenatis quam porta. Mauris quis neque leo. Vivamus cursus id mi non sagittis. Aliquam erat volutpat. Morbi ultrices lobortis elementum. Vestibulum metus orci, sagittis nec nisi sit amet, auctor sodales ipsum. Quisque id lorem venenatis, tincidunt lacus nec, vulputate sem.
+				p.lastLine
+
+			+alert
+				| The text in the text 1 box spills over the top of other text when spacing is changed.
+
+			hr
+			h2 Sample text 2
+			#text2.sampleText 
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia eleifend congue. In hac habitasse platea dictumst. Phasellus sapien ex, auctor sed purus eget, dignissim feugiat lorem. Morbi fermentum at augue a tristique. Praesent dui dolor, imperdiet id tempor eget, vehicula a leo. Fusce luctus magna ac nunc facilisis viverra. 
+				p Curabitur sit amet suscipit nibh. Fusce dignissim imperdiet erat vel congue. Integer varius nunc id sagittis porta. Quisque euismod libero id neque pretium, et venenatis quam porta. Mauris quis neque leo. Vivamus cursus id mi non sagittis. Aliquam erat volutpat. Morbi ultrices lobortis elementum. Vestibulum metus orci, sagittis nec nisi sit amet, auctor sodales ipsum. Quisque id lorem venenatis, tincidunt lacus nec, vulputate sem.
+				p.lastLine
+
+			+alert
+				| The text in the text 2 box is cut off and no longer visible when spacing is changed.
+
+
+			hr
+			h2 Sample text 3
+			#text3.sampleText 
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia eleifend congue. In hac habitasse platea dictumst. Phasellus sapien ex, auctor sed purus eget, dignissim feugiat lorem. Morbi fermentum at augue a tristique. Praesent dui dolor, imperdiet id tempor eget, vehicula a leo. Fusce luctus magna ac nunc facilisis viverra. 
+				p Curabitur sit amet suscipit nibh. Fusce dignissim imperdiet erat vel congue. Integer varius nunc id sagittis porta. Quisque euismod libero id neque pretium, et venenatis quam porta. Mauris quis neque leo. Vivamus cursus id mi non sagittis. Aliquam erat volutpat. Morbi ultrices lobortis elementum. Vestibulum metus orci, sagittis nec nisi sit amet, auctor sodales ipsum. Quisque id lorem venenatis, tincidunt lacus nec, vulputate sem.
+				p.lastLine
+
+
+	block extraCode
+		script(src="../assets/javascripts/navbar.js")

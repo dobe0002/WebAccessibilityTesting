@@ -1,0 +1,41 @@
+extends ../templates/testerPage.pug
+
+block head
+	style.
+		@media screen and (orientation: landscape) {
+			.landscape {display:block;}
+			.portrait{ display:none}
+		}
+		@media screen and (orientation: portrait) {
+			.landscape {display:none;}
+			.portrait{ display:block}
+		}
+
+
+block title
+	|Orientation
+
+block checkFor
+	+checkFor("Page can be displayed in portrait mode")
+	+checkFor("Page can be displayed in landscape mode")
+	
+block howToCheckURL
+	//-
+		+howToCheck("h.n0blawx4c67y")
+
+block content
+	.row
+		.col
+			
+			
+			.landscape
+				.alert.alert-danger Please turn your device to see content
+			.portrait
+				h2 This content is only available in portrait mode
+				
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper molestie pellentesque. Integer vestibulum sem ut metus consectetur, ac porttitor lectus dignissim. Maecenas a convallis nibh. Mauris iaculis feugiat sapien, quis congue diam luctus ut. Aenean vel dapibus ligula, vitae finibus purus. Donec fermentum sem ut urna imperdiet, at accumsan dolor tincidunt. Vivamus commodo fermentum rutrum. Mauris vel vulputate ex, nec facilisis eros. Integer lectus dolor, mattis eu neque sed, commodo sollicitudin sem. 
+
+
+			+alert
+				| The page must be in portrait mode to view content.  Content should be available and orientated correctly in both portrait or landscape mode.
+

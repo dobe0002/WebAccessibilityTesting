@@ -1,0 +1,126 @@
+extends ../templates/testerPage.pug
+
+block head
+	style.
+		td h3{white-space: nowrap;}
+
+		#badNav{
+			width:100%
+		}
+		#badNav{
+			display:table;
+			
+		}
+		#badNav ul{
+			display:table-row;
+			position:absolute;
+			left:120px;
+			top:7px;
+		}
+		#badNav ul li{
+			display:table-cell
+		}
+		#badNav ul li a{
+			padding:0.5rem;
+			display:block;
+			white-space: nowrap;
+		}
+
+
+block title
+	|Reflow (mobile friendly)
+
+block checkFor
+	+checkFor("No horizontal scrolling is needed in a window sizes down to 320px wide")
+
+	
+block howToCheckURL
+	//-
+		+howToCheck("h.n0blawx4c67y")
+
+block content
+	.row
+		.col
+			h2 Sample column set 1
+			.row
+				.col-md-4.alert.alert-primary
+					h3 Set 1 - Column 1
+					p Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+				.col-md-4.alert.alert-success
+					h3 Set 2 - Column 2
+					p Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+				.col-md-4.alert.alert-secondary
+					h3 Set 3 - Column 3
+					p Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+			hr
+			h2 Sample column set 2
+			table
+				tr
+					td.alert.alert-primary
+						h3 Set 2 - Column 1
+						p Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+				
+					td.alert.alert-primary
+						h3 Set 2 - Column 2
+						p Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+					
+					td.alert.alert-primary
+						h3 Set 2 - Column 3
+						p Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.
+				
+
+			+alert
+				| Column set 2 does not reflow and horizontal scrolling is required when zoomed to 400% or a 320px wide screen.
+
+
+			hr
+
+			h2 Sample Navbar 1
+			nav(class="navbar navbar-light" style="background-color: #ddd;")#badNav
+				//a.navbar-brand(href="#") Navbar 1
+				a.navbar-brand(href="#") Navbar 1
+
+				div
+					ul.navbar-nav
+						//li.nav-item
+						//	a.navbar-brand(href="#") Navbar 1
+						li.nav-item
+							a.nav-link(href="#") Item 1
+						li.nav-item
+							a.nav-link(href="#") Item 2
+						li.nav-item
+							a.nav-link(href="#") Item 3
+						li.nav-item
+							a.nav-link(href="#") Item 4
+						li.nav-item
+							a.nav-link(href="#") Item 5
+			+alert
+				| Navigation set 1 does not reflow and horizontal scrolling is required when zoomed to 400% or a 320px wide screen.
+
+
+			hr
+
+			h3 Sample Navbar 2
+
+			nav(class="navbar navbar-light navbar-expand-lg" style="background-color: #ddd;")
+				a.navbar-brand(href="#") Navbar 2
+				button.navbar-toggler(data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+					span.navbar-toggler-icon
+
+				.collapse.navbar-collapse#navbarSupportedContent
+					ul.navbar-nav.mr-auto
+						li.nav-item
+							a.nav-link(href="#") Item 1
+						li.nav-item
+							a.nav-link(href="#") Item 2
+						li.nav-item
+							a.nav-link(href="#") Item 3
+						li.nav-item
+							a.nav-link(href="#") Item 4
+						li.nav-item
+							a.nav-link(href="#") Item 5
+
+
+
+	block extraCode
+		script(src="../assets/javascripts/navbar.js")

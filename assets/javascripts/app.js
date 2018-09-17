@@ -1,6 +1,10 @@
 /************** Document load ************/
 
-$(".toggle-warnings-btn").click(function(){$(".alert-warning").toggle("slow")});
+$(".toggle-warnings-btn").click(function(){
+  $(".alert-warning").toggle("slow")
+  $(".alert-info").toggle("slow");
+})
+  ;
 
 
 /*************** MODAL *******************/

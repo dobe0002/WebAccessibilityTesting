@@ -1,0 +1,57 @@
+extends ../templates/testerPage.pug
+
+block head
+	style.
+
+block title
+	|Spacing
+
+block checkFor
+	+checkFor("?????")
+
+	
+block howToCheckURL
+	//-
+		+howToCheck("h.n0blawx4c67y")
+
+block content
+	
+	.row
+		.col
+			h2 Work address example 1
+
+			form(action="#")
+				fieldset
+					legend Work Address
+					.form-group
+						label(for="example1WorkStreet") Street
+						input.form-control(type="text"  id="example1WorkStreet" autocomplete="work street-address")
+					.form-group
+						label(for="example1WorkCity")  City
+						input.form-control(type="text"  id="example1WorkCity" autocomplete="work address-level2")
+					.form-group
+						label(for="example1WorkState") State
+						input.form-control(type="text"  id="example1WorkState" autocomplete="work address-level1")
+					.form-group
+						label(for="example1WorkZip") Zip Code
+						input.form-control(type="text"  id="example1WorkZip" autocomplete="work postal-code")
+					button.btn.btn-primary(type="submit") Submit
+
+			hr
+
+			form(action="autofill.html")
+				fieldset
+					legend Shipping Address
+					.form-group
+						label(for="example1ShipStreet") Shp Strt
+						input.form-control(type="text"  id="example1ShipStreet" )
+					.form-group
+						label(for="example1ShipCity") Shp Cty
+						input.form-control(type="text"  id="example1ShipCity" )
+					.form-group
+						label(for="example1ShipState") Shp Stte
+						input.form-control(type="text"  id="example1ShipState" )
+					.form-group
+						label(for="example1ShipZip") Shp ZpCd
+						input.form-control(type="text"  id="example1ShipZip")
+					button.btn.btn-primary(type="submit") Submit
