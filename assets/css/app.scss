@@ -3,12 +3,60 @@
 
 
 /*!
+ * Bootstrap v4.1.0 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "bootstrap_4_10/functions";
+@import "bootstrap_4_10/variables";
+@import "bootstrap_4_10/mixins";
+@import "bootstrap_4_10/root";
+@import "bootstrap_4_10/reboot";
+@import "bootstrap_4_10/type";
+@import "bootstrap_4_10/images";
+@import "bootstrap_4_10/code";
+@import "bootstrap_4_10/grid";
+@import "bootstrap_4_10/tables";
+@import "bootstrap_4_10/forms";
+@import "bootstrap_4_10/buttons";
+@import "bootstrap_4_10/transitions";
+@import "bootstrap_4_10/dropdown";
+@import "bootstrap_4_10/button-group";
+@import "bootstrap_4_10/input-group";
+@import "bootstrap_4_10/custom-forms";
+@import "bootstrap_4_10/nav";
+@import "bootstrap_4_10/navbar";
+@import "bootstrap_4_10/card";
+@import "bootstrap_4_10/breadcrumb";
+@import "bootstrap_4_10/pagination";
+@import "bootstrap_4_10/badge";
+@import "bootstrap_4_10/jumbotron";
+@import "bootstrap_4_10/alert";
+@import "bootstrap_4_10/progress";
+@import "bootstrap_4_10/media";
+@import "bootstrap_4_10/list-group";
+@import "bootstrap_4_10/close";
+@import "bootstrap_4_10/modal";
+@import "bootstrap_4_10/tooltip";
+@import "bootstrap_4_10/popover";
+@import "bootstrap_4_10/carousel";
+@import "bootstrap_4_10/utilities";
+@import "bootstrap_4_10/print";
+
+
+
+
+
+
+/*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- 
+ /*
 @import "Bootstrap/functions";
 @import "Bootstrap/variables";
 @import "Bootstrap/mixins";
@@ -44,7 +92,7 @@
 @import "Bootstrap/carousel";
 @import "Bootstrap/utilities";
 
-
+*/
 // Font Awesome
 
 $fa-font-path:        "font-awesome/fonts" !default;
