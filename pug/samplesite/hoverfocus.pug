@@ -1,0 +1,106 @@
+extends ../templates/testerPage.pug
+
+block head
+	style.
+	
+		.myToolTip,.myToolTip2,.myToolTip3 {padding:5px display:inline-block; font-weight:bold; font-size:1.1em}
+		.myToolTip{background-color:#ddd}
+		.myToolTip2{background-color:#e2bded}
+		.myToolTip3{background-color:#ade070}
+block title
+	|Hover and Focus
+
+block checkFor
+	+checkFor("You can dismiss the tooltip, popover, or modal without loosing focus or moving the mouse.")
+	+checkFor("You can hover over the tooltip, popover, or modal without it closing.")
+	
+block howToCheckURL
+	//-
+		+howToCheck("h.n0blawx4c67y")
+
+block content
+	.row
+		.col
+			h2 Tooltip  example set 1
+			p NOTE: You can dismiss the tooltip by hitting the "escape" key.
+			p 
+				| Lorem ipsum dolor sit amet, 
+				span.myToolTip(data-toggle="tooltip" title="Tooltip example 1" tabindex="0") consectetur adipiscing elit. 
+				|Vivamus in magna ac nunc faucibus lacinia. Cras id volutpat nisi. Ut molestie lectus at eros tempor venenatis. 
+				span.myToolTip(data-toggle="tooltip" title="Tooltip example 2" tabindex="0") in nunc sapien. 
+				|Morbi laoreet dictum leo ut tempor. Morbi eu mi sed libero interdum ultricies. 
+				span.myToolTip(data-toggle="tooltip" title="Tooltip example 3" tabindex="0") Aliquam in varius urna, 
+				|nec auctor turpis. Nullam et luctus lectus.
+
+			hr
+
+			h2 Tooltip example set 2
+			p 
+				| Lorem ipsum dolor sit amet, 
+				span.myToolTip2(data-toggle="tooltip" title="Tooltip example 1" ) consectetur adipiscing elit. 
+				|Vivamus in magna ac nunc faucibus lacinia. Cras id volutpat nisi. Ut molestie lectus at eros tempor venenatis. 
+				span.myToolTip2(data-toggle="tooltip" title="Tooltip example 2") in nunc sapien. 
+				|Morbi laoreet dictum leo ut tempor. Morbi eu mi sed libero interdum ultricies. 
+				span.myToolTip2(data-toggle="tooltip" title="Tooltip example 3" ) Aliquam in varius urna, 
+				|nec auctor turpis. Nullam et luctus lectus.
+
+			+alert
+				p Tooltip example set 2 is only available on hover.  
+				P The user cannot activate the tooltip by using the tab key (on focus).  
+				p The tooltip itself closes when a user attempts to move the mouse on top of the tooltip.
+				p The tooltip cannot be closed without moving the mouse (by hitting the escape key for example).
+
+			hr
+
+			h2 Tooltip example set 3
+			| Lorem ipsum dolor sit amet, 
+			span.myToolTip3(data-toggle="tooltip" title="Tooltip example 1" tabindex="0") consectetur adipiscing elit. 
+			|Vivamus in magna ac nunc faucibus lacinia. Cras id volutpat nisi. Ut molestie lectus at eros tempor venenatis. 
+			span.myToolTip3(data-toggle="tooltip" title="Tooltip example 2" tabindex="0") in nunc sapien. 
+			|Morbi laoreet dictum leo ut tempor. Morbi eu mi sed libero interdum ultricies. 
+			span.myToolTip3(data-toggle="tooltip" title="Tooltip example 3" tabindex="0") Aliquam in varius urna, 
+			|nec auctor turpis. Nullam et luctus lectus.
+
+			+alert
+				p Tooltip example set 3 is only available on focus (the tooltip must be tabbed to).   
+				p The tooltip cannot be closed without moving focus (hitting the tab key) or the mouse (by hitting the escape key for example).
+
+
+
+block extraCode
+	
+	script.
+		$(function () {
+			$('.myToolTip') //This is the real code you should use => $('[data-toggle="tooltip"]')
+			.tooltip( {trigger: 'manual'})
+			.mouseover((event)=>{
+				$(event.target).tooltip('show')
+				$(".tooltip").on("mouseleave", function () {
+					$(event.target).tooltip('hide')
+				});
+			})
+			.mouseout((event)=>{
+				 setTimeout(()=>{
+					 if(!$('.tooltip:hover').length) $(event.target).tooltip('hide')
+				 },100)
+			})
+			.focus((event)=>{
+				$(event.target).tooltip('show')
+			})
+			.blur((event)=>{
+				$(event.target).tooltip('hide')
+			})
+	
+			$('body').keydown((event)=>{
+				if(event.keyCode===27){
+					$('.myToolTip').tooltip('hide'); // This is the real code you should use => $('[data-toggle="tooltip"]').tooltip('hide')
+				}
+			})
+
+
+			$('.myToolTip2').tooltip({trigger:'hover'})
+			$('.myToolTip3').tooltip({trigger:'focus'})
+
+		})
+
+
