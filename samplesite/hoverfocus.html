@@ -1,0 +1,144 @@
+<!DOCTYPE html  >
+<html lang="en"> 
+  <head>
+    <title>
+       Web Accessibility Testing - Hover and Focus
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
+    <link href="../assets/css/app.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+      .myToolTip,.myToolTip2,.myToolTip3 {padding:5px display:inline-block; font-weight:bold; font-size:1.1em}
+      .myToolTip{background-color:#ddd}
+      .myToolTip2{background-color:#e2bded}
+      .myToolTip3{background-color:#ade070}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-11">
+            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
+          </div>
+          <div class="col d-none d-lg-block">
+            <div class="header-background"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
+        <li class="active breadcrumb-item">Hover and Focus
+        </li>
+      </ol>
+    </nav>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Hover and Focus
+          </h1>
+          <div class="card bg-light">
+            <div class="card-body">
+              <h2 class="h3">Things to check for:</h2>
+              <ul class="fa-ul">
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>You can dismiss the tooltip, popover, or modal without loosing focus or moving the mouse.
+                </li>
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>You can hover over the tooltip, popover, or modal without it closing.
+                </li>
+              </ul>
+              <ul class="list-inline testerActionButtons">
+                <li class="list-inline-item">
+                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                </li>
+                <li class="list-inline-item">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Tooltip  example set 1</h2>
+          <p>NOTE: You can dismiss the tooltip by hitting the "escape" key.</p>
+          <p>
+             Lorem ipsum dolor sit amet, <span class="myToolTip" data-toggle="tooltip" title="Tooltip example 1" tabindex="0">consectetur adipiscing elit. </span>Vivamus in magna ac nunc faucibus lacinia. Cras id volutpat nisi. Ut molestie lectus at eros tempor venenatis. <span class="myToolTip" data-toggle="tooltip" title="Tooltip example 2" tabindex="0">in nunc sapien. </span>Morbi laoreet dictum leo ut tempor. Morbi eu mi sed libero interdum ultricies. <span class="myToolTip" data-toggle="tooltip" title="Tooltip example 3" tabindex="0">Aliquam in varius urna, </span>nec auctor turpis. Nullam et luctus lectus.</p>
+          <hr/>
+          <h2>Tooltip example set 2</h2>
+          <p>
+             Lorem ipsum dolor sit amet, <span class="myToolTip2" data-toggle="tooltip" title="Tooltip example 1">consectetur adipiscing elit. </span>Vivamus in magna ac nunc faucibus lacinia. Cras id volutpat nisi. Ut molestie lectus at eros tempor venenatis. <span class="myToolTip2" data-toggle="tooltip" title="Tooltip example 2">in nunc sapien. </span>Morbi laoreet dictum leo ut tempor. Morbi eu mi sed libero interdum ultricies. <span class="myToolTip2" data-toggle="tooltip" title="Tooltip example 3">Aliquam in varius urna, </span>nec auctor turpis. Nullam et luctus lectus.</p>
+          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>
+            <p>Tooltip example set 2 is only available on hover.  </p>
+            <P>The user cannot activate the tooltip by using the tab key (on focus).  </P>
+            <p>The tooltip itself closes when a user attempts to move the mouse on top of the tooltip.</p>
+            <p>The tooltip cannot be closed without moving the mouse (by hitting the escape key for example).</p>
+          </div>
+          <hr/>
+          <h2>Tooltip example set 3</h2>Lorem ipsum dolor sit amet, <span class="myToolTip3" data-toggle="tooltip" title="Tooltip example 1" tabindex="0">consectetur adipiscing elit. </span>Vivamus in magna ac nunc faucibus lacinia. Cras id volutpat nisi. Ut molestie lectus at eros tempor venenatis. <span class="myToolTip3" data-toggle="tooltip" title="Tooltip example 2" tabindex="0">in nunc sapien. </span>Morbi laoreet dictum leo ut tempor. Morbi eu mi sed libero interdum ultricies. <span class="myToolTip3" data-toggle="tooltip" title="Tooltip example 3" tabindex="0">Aliquam in varius urna, </span>nec auctor turpis. Nullam et luctus lectus.
+          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>
+            <p>Tooltip example set 3 is only available on focus (the tooltip must be tabbed to).   </p>
+            <p>The tooltip cannot be closed without moving focus (hitting the tab key) or the mouse (by hitting the escape key for example).</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><small>By Kim Doberstein - University of Minnesota </small></footer>
+    <div class="modal" id="bs4Modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5">Modal title goes here</h2>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-times " aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            </button>
+          </div>
+          <div class="modal-body">Modal body text goes here.</div>
+          <div class="modal-footer">Modal footer buttons go here</div>
+        </div>
+      </div>
+    </div>
+    <!--script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")-->
+    <!--script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")-->
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="../assets/javascripts/skipto.min.js"></script>
+    <script src="../assets/javascripts/app-min.js"></script>
+    <script>
+      $(function () {
+      	$('.myToolTip') //This is the real code you should use => $('[data-toggle="tooltip"]')
+      	.tooltip( {trigger: 'manual'})
+      	.mouseover((event)=>{
+      		$(event.target).tooltip('show')
+      		$(".tooltip").on("mouseleave", function () {
+      			$(event.target).tooltip('hide')
+      		});
+      	})
+      	.mouseout((event)=>{
+      		 setTimeout(()=>{
+      			 if(!$('.tooltip:hover').length) $(event.target).tooltip('hide')
+      		 },100)
+      	})
+      	.focus((event)=>{
+      		$(event.target).tooltip('show')
+      	})
+      	.blur((event)=>{
+      		$(event.target).tooltip('hide')
+      	})
+      
+      	$('body').keydown((event)=>{
+      		if(event.keyCode===27){
+      			$('.myToolTip').tooltip('hide'); // This is the real code you should use => $('[data-toggle="tooltip"]').tooltip('hide')
+      		}
+      	})
+      
+      
+      	$('.myToolTip2').tooltip({trigger:'hover'})
+      	$('.myToolTip3').tooltip({trigger:'focus'})
+      
+      })
+    </script>
+  </body>
+</html>
