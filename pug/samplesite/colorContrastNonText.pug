@@ -1,0 +1,105 @@
+extends ../templates/testerPage.pug
+
+block head
+	style.
+		input[type=text]{
+			border:none;
+			border-bottom:1px solid #898989;
+		}
+		.bad{
+			border-color: #ced4da
+		}
+		label{
+			font-weight:bold;
+		}
+		label:after{
+			content:":"
+		}
+		
+		.btn-primary:hover, .btn-primary:focus{
+			background-color:#245075;
+			text-decoration:underline;
+		}
+		.button2:focus,.button2:hover{
+			box-shadow:none;
+			text-decoration:none;
+			
+		}
+
+		.imgOne{background-color:#dc7920}
+		.imgOne i{color:#fff;}
+		
+		.imgTwo{background-color:#ffc107;}
+		.imgTwo i{color:#fff;}
+
+		.imgThree{background-color:#ffeb3b; border:2px solid #555}
+		.imgThree i{color:#555555}
+
+		.rounded-circle{
+			width:50px;
+			height:50px;
+			display: inline-block;
+			margin-right: 15px;
+		}
+		.rounded-circle i{
+			margin-left: 31%;
+			margin-top: 18%;
+			
+		}
+
+block title
+	|Color Contrast Non-Text
+
+block checkFor
+	p The following should have at least a contrast ratio of 3:1
+	+checkFor("Input fields  border or a background color and the page background.")
+	+checkFor("Items receiving focus with color before receiving focus OR have an indicator besides color (like text underlining or additional shadow).")
+	+checkFor("Icons and other informational images with the page background")
+	+checkFor("Images inside an icon and the icon background color")
+block howToCheckURL
+	// +howToCheck("h.n0blawx4c67y")
+
+block content
+	.row
+		.col
+			h2 Example Form
+
+			form
+				.form-group.row
+					label.col-sm-1.col-form-label(for="inputName") Name
+					.col
+						input#inputName.form-control.bad(type="text" )
+				.form-group.row
+					label.col-sm-1.col-form-label(for="inputEmail3") Email
+					.col
+						input#inputEmail3.form-control(type="email" )
+				+alert
+					p The border around the "email" input field doesn't have a contrast ratio of at least 3:1.
+				
+				p
+					button.btn.btn-primary.btn-lg(type="button" ) Button 1
+				
+					button.btn.btn-primary.btn-lg.button2(type="button" ) Button 2
+				+alert
+					p When Button 2 receives focus, the change in color doesn't have a contrast ratio of at least 3:1 with the color before receiving focus.  
+					p Button 2 does not have a secondary indicator, like a shadow, to assist the user from knowing button 2 has focus.
+
+			hr
+			h2 Info graphics
+
+
+			p
+				.rounded-circle.imgOne
+					+faText('lightbulb-o', 'fa-2x', "idea 1")
+				| Idea 1
+			p
+				.rounded-circle.imgTwo
+					+faText('lightbulb-o', 'fa-2x', "idea 2")
+				| Idea 2
+			+alert
+				p Idea 2 icon background does not have a contrast ratio of 3:1 wth the page background.
+				p The light bulb icon in Idea 2 does not have  a contrast ratio of 3:1 wth the icon background.
+			p
+				.rounded-circle.imgThree
+					+faText('lightbulb-o', 'fa-2x', "idea 3")
+				| Idea 3

@@ -1,0 +1,70 @@
+extends ../templates/testerPage.pug
+
+block head
+	style.
+		.codeStore .col{
+			text-align:center
+		}
+		.codeStore .col p{
+			margin-top:30px;
+		}
+		
+block title
+	|Label in Name
+
+block checkFor
+	+checkFor("What a screenreader calls an element (accessible name) matches or starts with what is visible on screen (label).")
+
+block howToCheckURL
+	// +howToCheck("h.n0blawx4c67y")
+
+block content
+	.row
+		.col
+			h2 Ways to store code
+
+			.row.codeStore
+				.col
+					+faText('codepen', 'fa-5x', "")
+					p
+						button.btn.btn-primary.btn-lg(role="link" aria-label="CodePen in a new window") CodePen
+
+				.col
+					+faText('jsfiddle', 'fa-5x', "")
+					p
+						button.btn.btn-primary.btn-lg(role="link") JSFiddle
+				.col
+					+faText('github', 'fa-5x', "")
+					p
+						button.btn.btn-primary.btn-lg(role="link" aria-label="Open new window for GitHub") GitHub
+					+alert
+						| What is read by the screenreader (the accessible name) for the GitHub button does not match or start with that is visually shown (the label).
+					// button.btn.btn-primary.btn-lg(type="button" ) Button 1
+				
+					// button.btn.btn-primary.btn-lg.button2(type="button" ) Button 2
+			hr
+
+			h2 Simple contact form
+			.row
+				.col
+					form
+						.form-group.row
+							label.col-sm-1.col-form-label(for="inputName") Name
+							.col
+								input#inputName.form-control.bad(type="text" )
+						.form-group.row
+							duv.col-sm-1.col-form-label Phone
+							label.sr-only(for="inputPhone") Cell or landline telephone number
+							.col
+								input#inputPhone.form-control(type="text" )
+								+alert
+									| What is read by the screenreader (the accessible name) for the phone input does not match or start with that is visually shown (the label).
+
+						.form-group.row
+							div.col-sm-1.col-form-label(for="inputEmail3") Email
+							.col
+								input#inputEmail3.form-control(type="email" aria-label="Please enter your email address" )
+								+alert
+									| What is read by the screenreader (the accessible name) for the email input does not match or start with that is visually shown (the label).
+
+			

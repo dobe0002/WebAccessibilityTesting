@@ -1,0 +1,145 @@
+<!DOCTYPE html  >
+<html lang="en"> 
+  <head>
+    <title>
+       Web Accessibility Testing - Label in Name
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
+    <link href="../assets/css/app.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <style>
+      .codeStore .col{
+      	text-align:center
+      }
+      .codeStore .col p{
+      	margin-top:30px;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-11">
+            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
+          </div>
+          <div class="col d-none d-lg-block">
+            <div class="header-background"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
+        <li class="active breadcrumb-item">Label in Name
+        </li>
+      </ol>
+    </nav>
+    <main class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Label in Name
+          </h1>
+          <div class="card bg-light">
+            <div class="card-body">
+              <h2 class="h3">Things to check for:</h2>
+              <ul class="fa-ul">
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>What a screenreader calls an element (accessible name) matches or starts with what is visible on screen (label).
+                </li>
+              </ul>
+              <ul class="list-inline testerActionButtons">
+                <li class="list-inline-item">
+                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                </li>
+                <li class="list-inline-item">
+                  <!-- +howToCheck("h.n0blawx4c67y")-->
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h2>Ways to store code</h2>
+          <div class="row codeStore">
+            <div class="col"><i class="fa fa-codepen fa-5x" aria-hidden="true"></i><span class="sr-only"></span>
+              <p>
+                <button class="btn btn-primary btn-lg" role="link" aria-label="CodePen in a new window">CodePen</button>
+              </p>
+            </div>
+            <div class="col"><i class="fa fa-jsfiddle fa-5x" aria-hidden="true"></i><span class="sr-only"></span>
+              <p>
+                <button class="btn btn-primary btn-lg" role="link">JSFiddle</button>
+              </p>
+            </div>
+            <div class="col"><i class="fa fa-github fa-5x" aria-hidden="true"></i><span class="sr-only"></span>
+              <p>
+                <button class="btn btn-primary btn-lg" role="link" aria-label="Open new window for GitHub">GitHub</button>
+              </p>
+              <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>What is read by the screenreader (the accessible name) for the GitHub button does not match or start with that is visually shown (the label).
+              </div>
+              <!-- button.btn.btn-primary.btn-lg(type="button" ) Button 1-->
+              <!-- button.btn.btn-primary.btn-lg.button2(type="button" ) Button 2-->
+            </div>
+          </div>
+          <hr/>
+          <h2>Simple contact form</h2>
+          <div class="row">
+            <div class="col">
+              <form>
+                <div class="form-group row">
+                  <label class="col-sm-1 col-form-label" for="inputName">Name</label>
+                  <div class="col">
+                    <input class="form-control bad" id="inputName" type="text"/>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <duv class="col-sm-1 col-form-label">Phone</duv>
+                  <label class="sr-only" for="inputPhone">Cell or landline telephone number</label>
+                  <div class="col">
+                    <input class="form-control" id="inputPhone" type="text"/>
+                    <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>What is read by the screenreader (the accessible name) for the phone input does not match or start with that is visually shown (the label).
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-1 col-form-label" for="inputEmail3">Email</div>
+                  <div class="col">
+                    <input class="form-control" id="inputEmail3" type="email" aria-label="Please enter your email address"/>
+                    <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>What is read by the screenreader (the accessible name) for the email input does not match or start with that is visually shown (the label).
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><small>By Kim Doberstein - University of Minnesota </small></footer>
+    <div class="modal" id="bs4Modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title h5">Modal title goes here</h2>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-times " aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            </button>
+          </div>
+          <div class="modal-body">Modal body text goes here.</div>
+          <div class="modal-footer">Modal footer buttons go here</div>
+        </div>
+      </div>
+    </div>
+    <!--script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")-->
+    <!--script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")-->
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="../assets/javascripts/skipto.min.js"></script>
+    <script src="../assets/javascripts/app-min.js"></script>
+  </body>
+</html>
