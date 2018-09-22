@@ -1,7 +1,19 @@
 /************** Document load ************/
 
 $(".toggle-warnings-btn").click(function(){
-  $(".alert-warning").toggle("slow")
+  var btn = $(this);
+  $(".alert-warning").toggle("slow",function(){
+    // if there are alert warnings ... add a new alert off screen
+    var alerts= $('.alert-warning:visible').length
+    if(alerts>0){
+        if($('.sr-alert-count').length===0){
+          $("<div role='alert' class='sr-only sr-alert-count'>There are "+alerts+" accessibility errors.</div>").insertAfter(btn)
+        }
+    }
+    else{
+      $('.sr-alert-count').remove();
+    }
+  })
   $(".alert-info").toggle("slow");
 })
   ;
