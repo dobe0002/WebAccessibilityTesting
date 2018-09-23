@@ -40,7 +40,7 @@
             <div class="card-body">
               <h2 class="h3">Things to check for:</h2>
               <ul class="fa-ul">
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>?????
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Text input fields should have a valid autocomplete attribute.
                 </li>
               </ul>
               <ul class="list-inline testerActionButtons">
@@ -50,10 +50,7 @@
                 <li class="list-inline-item">
                   <!-- -
                   https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html
-                  
-                  
-                  
-                  
+                  https://www.w3.org/TR/html5/sec-forms.html#autofill-detail-tokens
                   
                   
                   -->
@@ -63,54 +60,100 @@
           </div>
         </div>
       </div>
+      <div class="alert alert-info"><i class="fa fa-info fa-2x" aria-hidden="true"></i><span class="sr-only">Information</span>Valid values for the autocomplete attribute are discussed on the <a href="https://www.w3.org/TR/html5/sec-forms.html#autofill-detail-tokens">W3C Autocomplete documentation.</a>
+      </div>
       <div class="row">
         <div class="col">
-          <h2>Work address example 1</h2>
+          <h2>Billing address example</h2>
           <form action="#">
             <fieldset>
-              <legend>Work Address</legend>
-              <div class="form-group">
-                <label for="example1WorkStreet">Street</label>
-                <input class="form-control" type="text" id="example1WorkStreet" autocomplete="work street-address"/>
+              <legend>Billing address</legend>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example1WorkFirstName">First Name</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example1WorkFirstName" autocomplete="section-test billing given-name"/>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="example1WorkCity"> City</label>
-                <input class="form-control" type="text" id="example1WorkCity" autocomplete="work address-level2"/>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example1WorkLastName">Last Name</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example1WorkFirstName" autocomplete="section-test billing family-name"/>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="example1WorkState">State</label>
-                <input class="form-control" type="text" id="example1WorkState" autocomplete="work address-level1"/>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example1WorkStreet">Street</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example1WorkStreet" autocomplete="section-test billing street-address"/>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="example1WorkZip">Zip Code</label>
-                <input class="form-control" type="text" id="example1WorkZip" autocomplete="work postal-code"/>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example1WorkCity"> City</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example1WorkCity" autocomplete="section-test billing address-level2"/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example1WorkState">State</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example1WorkState" autocomplete="section-test billing address-level1"/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example1WorkZip">Zip Code</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example1WorkZip" autocomplete="section-test billing postal-code"/>
+                </div>
               </div>
               <button class="btn btn-primary" type="submit">Submit</button>
             </fieldset>
           </form>
           <hr/>
-          <form action="autofill.html">
+          <h2>Shipping address example</h2>
+          <form action="#">
             <fieldset>
-              <legend>Shipping Address</legend>
-              <div class="form-group">
-                <label for="abc">aldjf</label>
-                <input class="form-control" type="text" id="abc"/>
+              <legend>Shipping address</legend>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example2WorkFirstName">First Name</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example2WorkFirstName"/>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="bbc">aldjf</label>
-                <input class="form-control" type="text" id="bbc"/>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example2WorkLastName">Last Name</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example2WorkFirstName"/>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="cbc">lsdjf</label>
-                <input class="form-control" type="text" id="cbc"/>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example2WorkStreet">Street</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example2WorkStreet"/>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="dbc">sdlfj</label>
-                <input class="form-control" type="text" id="dbc"/>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example2WorkCity"> City</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example2WorkCity"/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example2WorkState">State</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example2WorkState"/>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="example2WorkZip">Zip Code</label>
+                <div class="col">
+                  <input class="form-control" type="text" id="example2WorkZip"/>
+                </div>
               </div>
               <button class="btn btn-primary" type="submit">Submit</button>
             </fieldset>
           </form>
+          <div class="alert alert-warning"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>
+            <p>All of the fields in the shipping address example are missing an autocomplete attribute.</p>
+          </div>
         </div>
       </div>
     </main>

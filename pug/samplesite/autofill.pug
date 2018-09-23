@@ -7,7 +7,7 @@ block title
 	|Spacing
 
 block checkFor
-	+checkFor("?????")
+	+checkFor("Text input fields should have a valid autocomplete attribute.")
 
 	
 block howToCheckURL
@@ -15,50 +15,78 @@ block howToCheckURL
 		+howToCheck("h.n0blawx4c67y")
 	// -
 		https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html
-
-
-
-
+		https://www.w3.org/TR/html5/sec-forms.html#autofill-detail-tokens
 
 
 block content
 	
+	+info
+		| Valid values for the autocomplete attribute are discussed on the 
+		a(href="https://www.w3.org/TR/html5/sec-forms.html#autofill-detail-tokens") W3C Autocomplete documentation.
+
 	.row
 		.col
-			h2 Work address example 1
+			h2 Billing address example
 
 			form(action="#")
 				fieldset
-					legend Work Address
-					.form-group
-						label(for="example1WorkStreet") Street
-						input.form-control(type="text"  id="example1WorkStreet" autocomplete="work street-address")
-					.form-group
-						label(for="example1WorkCity")  City
-						input.form-control(type="text"  id="example1WorkCity" autocomplete="work address-level2")
-					.form-group
-						label(for="example1WorkState") State
-						input.form-control(type="text"  id="example1WorkState" autocomplete="work address-level1")
-					.form-group
-						label(for="example1WorkZip") Zip Code
-						input.form-control(type="text"  id="example1WorkZip" autocomplete="work postal-code")
+					legend Billing address
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example1WorkFirstName") First Name
+						.col
+							input.form-control(type="text"  id="example1WorkFirstName" autocomplete="section-test billing given-name")
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example1WorkLastName") Last Name
+						.col
+							input.form-control(type="text"  id="example1WorkFirstName" autocomplete="section-test billing family-name")
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example1WorkStreet") Street
+						.col
+							input.form-control(type="text"  id="example1WorkStreet" autocomplete="section-test billing street-address")
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example1WorkCity")  City
+						.col
+							input.form-control(type="text"  id="example1WorkCity" autocomplete="section-test billing address-level2")
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example1WorkState") State
+						.col
+							input.form-control(type="text"  id="example1WorkState" autocomplete="section-test billing address-level1")
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example1WorkZip") Zip Code
+						.col
+							input.form-control(type="text"  id="example1WorkZip" autocomplete="section-test billing postal-code")
 					button.btn.btn-primary(type="submit") Submit
 
 			hr
-
-			form(action="autofill.html")
+			h2 Shipping address example
+			form(action="#")
 				fieldset
-					legend Shipping Address
-					.form-group
-						label(for="abc") aldjf
-						input.form-control(type="text"  id="abc" )
-					.form-group
-						label(for="bbc") aldjf
-						input.form-control(type="text"  id="bbc" )
-					.form-group
-						label(for="cbc") lsdjf
-						input.form-control(type="text"  id="cbc" )
-					.form-group
-						label(for="dbc") sdlfj
-						input.form-control(type="text"  id="dbc")
+					legend Shipping address
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example2WorkFirstName") First Name
+						.col
+							input.form-control(type="text"  id="example2WorkFirstName")
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example2WorkLastName") Last Name
+						.col
+							input.form-control(type="text"  id="example2WorkFirstName" )
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example2WorkStreet") Street
+						.col
+							input.form-control(type="text"  id="example2WorkStreet" )
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example2WorkCity")  City
+						.col
+							input.form-control(type="text"  id="example2WorkCity" )
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example2WorkState") State
+						.col
+							input.form-control(type="text"  id="example2WorkState" )
+					.form-group.row
+						label.col-sm-2.col-form-label(for="example2WorkZip") Zip Code
+						.col
+							input.form-control(type="text"  id="example2WorkZip" )
 					button.btn.btn-primary(type="submit") Submit
+			+alert
+				p All of the fields in the shipping address example are missing an autocomplete attribute.
+
