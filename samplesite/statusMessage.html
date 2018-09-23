@@ -40,7 +40,7 @@
             <div class="card-body">
               <h2 class="h3">Things to check for:</h2>
               <ul class="fa-ul">
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>
+                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Status messages that are initialed by a user action (like a button click) and no not change focus are announced by a screen reader.
                 </li>
               </ul>
               <ul class="list-inline testerActionButtons">
@@ -132,6 +132,7 @@
       	$(this).addClass('disabled').attr('disabled','disabled');
       	$('#custLoad').show();
       	$('#custTable').hide();
+      	$('#custLoadDone').hide();
       	setTimeout(()=>{ 
       		$('#custLoadDone').show();
       		$('#custLoad').hide();

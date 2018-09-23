@@ -7,7 +7,7 @@ block title
 	|Status Messages
 
 block checkFor
-	+checkFor("")
+	+checkFor("Status messages that are initialed by a user action (like a button click) and no not change focus are announced by a screen reader.")
 
 	
 block howToCheckURL
@@ -63,6 +63,7 @@ block extraCode
 			$(this).addClass('disabled').attr('disabled','disabled');
 			$('#custLoad').show();
 			$('#custTable').hide();
+			$('#custLoadDone').hide();
 			setTimeout(()=>{ 
 				$('#custLoadDone').show();
 				$('#custLoad').hide();
