@@ -54,7 +54,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
  
 input:focus, textarea:focus, a:focus, button:focus, *[tabindex='0']:focus, *[tabindex='-1']:focus {
 	
-	  box-shadow: 0 0 8px rgba(81, 203, 255, 1);
+	//  box-shadow: 0 0 8px rgba(81, 203, 255, 1);
 	  //padding: 3px 0px 3px 3px;
 	  //margin: 5px 1px 3px 0px;
 	  //border: 1px solid rgba(81, 203, 238, 1);
@@ -177,7 +177,7 @@ footer, .siteFooter{
 }
 
 
-//////////////// MAIN CONTNET //////////////
+//////////////// MAIN CONTENT //////////////
 #main_content, main{
 	
 
@@ -212,4 +212,10 @@ footer, .siteFooter{
 	.fa{
 		margin-right:10px
 	}
+}
+
+.faIcon{
+	margin-right:5px;
+	margin-left:5px;
+	display:inline-block;
 }

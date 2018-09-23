@@ -3,7 +3,7 @@ extends ../templates/landingPage.pug
 
 block head
 	style.
-		.star{color:#009; padding-left:10px; padding-right:10px}
+		.star{color:#009; display:none}
 		.notes{
 			margin-top:30px;margin-bottom:30px;
 		
@@ -17,7 +17,7 @@ block breadCrumbs
 	+breadcrumbSamplePage
 
 block icon
-	+fa('cogs','fa-5x')
+	+fas('cogs','fa-5x')
 
 block intro
 	p
@@ -36,13 +36,14 @@ block content
 			a(href="headings.html") Headings
 		li
 			a(href="images.html") Image Alternative Text 
-			+faText('star','star','(most troublesome)')
+			+fas('star','star','(most troublesome)')
+
 		li
 			a(href="tables.html") Data Tables 
-			+faText('star','star','(most troublesome)')
+			+fas('star','star','(most troublesome)')
 		li
 			a(href="forms.html") Forms 
-			+faText('star','star','(most troublesome)')
+			+fas('star','star','(most troublesome)')
 		li
 			a(href="hyperlinks.html") Hyperlinks
 		li
@@ -51,13 +52,36 @@ block content
 			a(href="colorContrast.html") Color Contrast
 		li
 			a(href="keyboard.html") Keyboard Navigation
-			+faText('star','star','(most troublesome)')
+			+fas('star','star','(most troublesome)')
 		li
 			a(href="landmarks.html") Landmarks
 		li
 			a(href="zoom.html") Zoom
-	p
-		+faText('star','star','(most troublesome)')
+	//-	p
+		+fas('star','star','(most troublesome)')
 		| Considered most troublesome.
 
 
+	h2 List of Sample Pages Addressing WCAG 2.1
+	ul
+		li 
+			a(href="orientation.html") Page orientation
+		li 
+			a(href="autofill.html") Input purpose 
+
+		li 
+			a(href="reflow.html") Page flow
+
+		li
+			a(href="colorContrastNonText.html") Non-text contrast
+
+		li
+			a(href="spacing.html") Text spacing
+
+		li
+			a(href="wrongLabel.html") Label in name
+
+		li 
+			a(href="hoverfocus.html") Hover or focus
+		li
+			a(href="statusMessage.html") Status messages

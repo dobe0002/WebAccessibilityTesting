@@ -4,7 +4,7 @@
     <title>
        Web Accessibility Testing - Zoom
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
     <link href="../assets/css/app.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -30,8 +30,8 @@
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
         <li class="active breadcrumb-item">Zoom
         </li>
       </ol>
@@ -45,14 +45,14 @@
             <div class="card-body">
               <h2 class="h3">Things to check for:</h2>
               <ul class="fa-ul">
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>No loss of content or functionality when text is zoomed to 200%
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>No loss of content or functionality when text is zoomed to 200%
                 </li>
               </ul>
               <ul class="list-inline testerActionButtons">
                 <li class="list-inline-item">
                   <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
                 </li>
-                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.gyswbi8d3bli" target="_blank">How to check <i class="fa fa-external-link " aria-hidden="true"></i><span class="sr-only">(new window)</span></a>
+                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.gyswbi8d3bli" target="_blank">How to check <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
                 </li>
               </ul>
             </div>
@@ -83,7 +83,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>When zoomed in the text is cut off in the second example (text next to image of the lotus flowers).
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>When zoomed in the text is cut off in the second example (text next to image of the lotus flowers).
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@
         <div class="col">
           <h2>Poetry</h2>
           <p><img class="littleLotus" src="assets/images/littleLotus.png" alt="The lotus"/>dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Morbi consequat enim a nisi dignissim mattis. Morbi leo ante, commodo vitae laoreet non, maximus vitae turpis. Vivamus eu lacus sapien. Nulla rhoncus gravida molestie. *** END ***</p>
-          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The first words "The lotus" either become "fuzzy" or don't zoom when other text is zoomed.
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The first words "The lotus" either become "fuzzy" or don't zoom when other text is zoomed.
           </div>
         </div>
       </div>
@@ -102,7 +102,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-times " aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>
@@ -112,6 +112,7 @@
     </div>
     <!--script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")-->
     <!--script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")-->
+    <script src="../assets/fontAwesome5/js/fontawesome-all.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="../assets/javascripts/skipto.min.js"></script>

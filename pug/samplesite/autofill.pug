@@ -4,7 +4,7 @@ block head
 	style.
 
 block title
-	|Spacing
+	|Input purpose (autocomplete attribute)
 
 block checkFor
 	+checkFor("Text input fields should have a valid autocomplete attribute.")
@@ -38,7 +38,7 @@ block content
 					.form-group.row
 						label.col-sm-2.col-form-label(for="example1WorkLastName") Last Name
 						.col
-							input.form-control(type="text"  id="example1WorkFirstName" autocomplete="section-test billing family-name")
+							input.form-control(type="text"  id="example1WorkLastName" autocomplete="section-test billing family-name")
 					.form-group.row
 						label.col-sm-2.col-form-label(for="example1WorkStreet") Street
 						.col
@@ -69,7 +69,7 @@ block content
 					.form-group.row
 						label.col-sm-2.col-form-label(for="example2WorkLastName") Last Name
 						.col
-							input.form-control(type="text"  id="example2WorkFirstName" )
+							input.form-control(type="text"  id="example2WorkLastName" )
 					.form-group.row
 						label.col-sm-2.col-form-label(for="example2WorkStreet") Street
 						.col
@@ -89,4 +89,3 @@ block content
 					button.btn.btn-primary(type="submit") Submit
 			+alert
 				p All of the fields in the shipping address example are missing an autocomplete attribute.
-

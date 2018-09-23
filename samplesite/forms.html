@@ -4,7 +4,7 @@
     <title>
        Web Accessibility Testing - Forms
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
     <link href="../assets/css/app.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -38,8 +38,8 @@
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
         <li class="active breadcrumb-item">Forms
         </li>
       </ol>
@@ -53,20 +53,20 @@
             <div class="card-body">
               <h2 class="h3">Things to check for:</h2>
               <ul class="fa-ul">
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Form labels are associated with their elements.
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Form labels are associated with their elements.
                 </li>
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>You can easily get to and control all actionable items only using the keyboard.
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>You can easily get to and control all actionable items only using the keyboard.
                 </li>
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>The tab order of form elements make sense.
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>The tab order of form elements make sense.
                 </li>
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>A form element that has “focus” ( tabbed or arrowed to) looks visually different.
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>A form element that has “focus” ( tabbed or arrowed to) looks visually different.
                 </li>
               </ul>Looking for more complex accessibility issues?  Visit the <a href="forms2.html">Forms - More Issues</a> page.
               <ul class="list-inline testerActionButtons">
                 <li class="list-inline-item">
                   <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
                 </li>
-                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.jffnss7v41w8" target="_blank">How to check <i class="fa fa-external-link " aria-hidden="true"></i><span class="sr-only">(new window)</span></a>
+                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.jffnss7v41w8" target="_blank">How to check <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
                 </li>
               </ul>
             </div>
@@ -86,7 +86,7 @@
               <label>First name</label>
               <input class="form-control" id="exampleInputFirstName" type="text" placeholder="First Name"/>
             </div>
-            <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>The "First name" label is not associated with its text field.
+            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The "First name" label is not associated with its text field.
             </div>
             <div class="form-group pull-left">
               <label for="exampleInputAddress">Address</label>
@@ -97,7 +97,7 @@
               <input class="form-control" id="exampleInputCity" type="text" placeholder="City"/>
             </div>
           </form>
-          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
             <p>Tab order is incorrect.  The tab order should be:</p>
             <ol>
               <li>First name</li>
@@ -111,7 +111,7 @@
           <form>
             <div class="form-group">
               <input class="form-control specialLabel" id="exampleInputSearch" type="text" placeholder="Search"/><small class="form-text text-muted" id="passwordHelpBlock">Search for people, places, or things</small>
-              <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>Search is missing a label
+              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>Search is missing a label
               </div>
             </div>
             <div class="form-group">
@@ -124,11 +124,11 @@
               </select>
             </div>
             <div class="form-check">
-              <div id="star"><i class="fa fa-star fa-2x starFull" aria-hidden="true"></i><i class="fa fa-star-o fa-2x starOpen" aria-hidden="true"></i>
+              <div id="star"><i class="fas fa-star fa-2x starFull faIcon" aria-hidden="true"></i><span class="sr-only"></span><i class="far fa-star fa-2x starOpen faIcon" aria-hidden="true"></i><span class="sr-only"></span>
               </div>
               <label for="sampleRating">Star</label>
               <input id="sampleRating" type="checkbox" style="display:none"/>
-              <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>Rating (star) input is not reachable via the keyboard.
+              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>Rating (star) input is not reachable via the keyboard.
               </div>
             </div>
             <fieldset class="form-check">
@@ -148,7 +148,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-times " aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>
@@ -158,6 +158,7 @@
     </div>
     <!--script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")-->
     <!--script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")-->
+    <script src="../assets/fontAwesome5/js/fontawesome-all.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="../assets/javascripts/skipto.min.js"></script>
