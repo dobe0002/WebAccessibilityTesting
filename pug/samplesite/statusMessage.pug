@@ -22,7 +22,7 @@ block content
 				button.btn.btn-primary#custButton Load customers
 			.alert.alert-dark(role="alert")#custLoad
 				+faText("circle-o-notch", "fa-spin fa-2x fa-fw", "Loading customers")
-			.alert(role="alert")#custLoadDone 3 customers loaded
+			.alert.sr-only(role="alert")#custLoadDone 3 customers loaded
 			table.table.table-striped#custTable
 				thead
 					tr
