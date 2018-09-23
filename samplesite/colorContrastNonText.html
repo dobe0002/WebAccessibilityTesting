@@ -4,7 +4,7 @@
     <title>
        Web Accessibility Testing - Color Contrast Non-Text
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
     <link href="../assets/css/app.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -12,6 +12,9 @@
       input[type=text]{
       	border:none;
       	border-bottom:1px solid #898989;
+      }
+      #inputEmail3{
+      	border-color:#ced4da;
       }
       .bad{
       	border-color: #ced4da
@@ -34,13 +37,13 @@
       }
       
       .imgOne{background-color:#dc7920}
-      .imgOne i{color:#fff;}
+      .imgOne {color:#fff;}
       
       .imgTwo{background-color:#ffc107;}
-      .imgTwo i{color:#fff;}
+      .imgTwo {color:#fff;}
       
       .imgThree{background-color:#ffeb3b; border:2px solid #555}
-      .imgThree i{color:#555555}
+      .imgThree {color:#555555}
       
       .rounded-circle{
       	width:50px;
@@ -48,8 +51,8 @@
       	display: inline-block;
       	margin-right: 15px;
       }
-      .rounded-circle i{
-      	margin-left: 31%;
+      .rounded-circle svg{
+      	margin-left: 26%;
       	margin-top: 18%;
       	
       }
@@ -71,8 +74,8 @@
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
         <li class="active breadcrumb-item">Color Contrast Non-Text
         </li>
       </ol>
@@ -85,15 +88,15 @@
           <div class="card bg-light">
             <div class="card-body">
               <h2 class="h3">Things to check for:</h2>
+              <p>The following should have at least a contrast ratio of 3:1:</p>
               <ul class="fa-ul">
-                <p>The following should have at least a contrast ratio of 3:1</p>
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Input fields  border or a background color and the page background.
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Input fields  border or a background color and the page background.
                 </li>
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Items receiving focus with color before receiving focus OR have an indicator besides color (like text underlining or additional shadow).
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Items receiving focus with color before receiving focus OR have an indicator besides color (like text underlining or additional shadow).
                 </li>
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Icons and other informational images with the page background
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Icons and other informational images with the page background
                 </li>
-                <li><i class="fa fa-check-square-o " aria-hidden="true"></i>Images inside an icon and the icon background color
+                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Images inside an icon and the icon background color
                 </li>
               </ul>
               <ul class="list-inline testerActionButtons">
@@ -124,14 +127,14 @@
                 <input class="form-control" id="inputEmail3" type="email"/>
               </div>
             </div>
-            <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>
+            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
               <p>The border around the "email" input field doesn't have a contrast ratio of at least 3:1.</p>
             </div>
             <p>
               <button class="btn btn-primary btn-lg" type="button">Button 1</button>
               <button class="btn btn-primary btn-lg button2" type="button">Button 2</button>
             </p>
-            <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>
+            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
               <p>When Button 2 receives focus, the change in color doesn't have a contrast ratio of at least 3:1 with the color before receiving focus.  </p>
               <p>Button 2 does not have a secondary indicator, like a shadow, to assist the user from knowing button 2 has focus.</p>
             </div>
@@ -139,19 +142,19 @@
           <hr/>
           <h2>Info graphics</h2>
           <p>
-            <div class="rounded-circle imgOne"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i><span class="sr-only">idea 1</span>
+            <div class="rounded-circle imgOne"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">idea 1</span>
             </div>Idea 1
           </p>
           <p>
-            <div class="rounded-circle imgTwo"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i><span class="sr-only">idea 2</span>
+            <div class="rounded-circle imgTwo"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">idea 2</span>
             </div>Idea 2
           </p>
-          <div class="alert alert-warning" role="alert"><i class="fa fa-bug fa-2x" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
             <p>Idea 2 icon background does not have a contrast ratio of 3:1 wth the page background.</p>
             <p>The light bulb icon in Idea 2 does not have  a contrast ratio of 3:1 wth the icon background.</p>
           </div>
           <p>
-            <div class="rounded-circle imgThree"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i><span class="sr-only">idea 3</span>
+            <div class="rounded-circle imgThree"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">idea 3</span>
             </div>Idea 3
           </p>
         </div>
@@ -163,7 +166,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-times " aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>
@@ -173,6 +176,7 @@
     </div>
     <!--script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")-->
     <!--script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")-->
+    <script src="../assets/fontAwesome5/js/fontawesome-all.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="../assets/javascripts/skipto.min.js"></script>

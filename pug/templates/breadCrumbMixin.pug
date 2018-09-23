@@ -5,7 +5,7 @@ mixin breadcrumbs(pathToRoot)
 		ol.breadcrumb
 			li.breadcrumb-item
 				a(href=pathToHome)
-					+fa('home','fa-2x')
+					+fas('home','fa-2x')
 					|Home
 			block
 
@@ -14,7 +14,7 @@ mixin breadcrumbLandingHome(icon,text,href,pathToRoot)
 	+breadcrumbs(pathToRoot)
 		li.breadcrumb-item
 			a(href=href)
-				+fa(icon,'fa-2x') 
+				+fas(icon,'fa-2x') 
 				| #{text}
 		block
  

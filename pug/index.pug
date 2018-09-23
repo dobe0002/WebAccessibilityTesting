@@ -3,7 +3,7 @@ extends templates/homePage.pug
 block head
 	style.
 		.card{margin-bottom:50px}
-		.fa{padding-right:10px;}
+		
 
 block title
 	|Home
@@ -23,7 +23,7 @@ block feature1
 	p There are numerous free tools you can use in a browser to make testing for accessibility easier.
 	p.button-row
 		a.btn.btn-outline-dark(href="tools/index.html")
-			+fa('wrench')
+			+fas('wrench')
 			|Tools
 
 
@@ -33,7 +33,7 @@ block feature2
 		|Sample website to practice your web accessibility testing skills. Errors are clearly marked.
 	p.button-row
 		a.btn.btn-primary(href="samplesite/index.html")
-			+fa('cogs')
+			+fas('cogs')
 			|Sample pages
 
 block feature3
@@ -43,12 +43,12 @@ block feature3
 
 	p
 		a(href="wave/index.html")
-			+fa('users')
+			+fas('users')
 			|WAVE
 
 	p.button-row
 		a.btn.btn-outline-dark(href="samplesite/forms2.html")
-			+fa('users')
+			+fas('users')
 			|Featured Training - Forms
 		
 block about

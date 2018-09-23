@@ -3,7 +3,7 @@ mixin externalLink(href, extraClasses)
 	a(href= href target="_blank" class= extraClasses)
 		block
 		| 
-		+faText('external-link','','(new window)')
+		+fao('external-link','','in a new window')
 
 mixin testingDocLink(heading,text,extraClasses)
 	- extraClasses = extraClasses || ''
@@ -15,25 +15,30 @@ mixin testingDocLink(heading,text,extraClasses)
 mixin howToCheck(heading)
 	+testingDocLink(heading,"How to check", "btn btn-outline-dark btn-sm")
 
+mixin fas(type,extraClasses,text)
+	+fabase(type,extraClasses,text,"s")
 
+mixin fao(type,extraClasses,text)
+	+fabase(type,extraClasses,text,"r")
 
-mixin fa(type, extraClasses)
+mixin fab(type,extraClasses,text)
+	+fabase(type,extraClasses,text,"b")
+
+mixin fabase(type,extraClasses,text,fill)
 	- extraClasses = extraClasses || ''
-	- var c='fa fa-'+type+' '+extraClasses
+	- var c='fa'+fill+' fa-'+type+' '+extraClasses+" faIcon"
 	i(class= c aria-hidden='true')
-
-mixin faText(type, extraClasses, text)
-	+fa(type,extraClasses)
 	- text = text || ''
 	span.sr-only #{text}
 
+
 mixin alert
 	.alert.alert-warning
-		+faText('bug','fa-2x','Bug')  
+		+fas('bug','fa-2x','Bug')  
 		block
 mixin info
 	.alert.alert-info
-		+faText('info','fa-2x','Information')  
+		+fas('info','fa-2x','Information')  
 		block
 
 mixin header_block(title, link)  
@@ -71,8 +76,10 @@ mixin bodyIncludes(pathToRoot)
 	- pathToRoot = pathToRoot || ''
 	- pathToSkipTo = pathToRoot+"assets/javascripts/skipto.min.js"
 	- pathToJS = pathToRoot+"assets/javascripts/app-min.js"
+	- pathToFontAwesome = pathToRoot+"assets/fontAwesome5/js/fontawesome-all.min.js"
 	//script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
 	//script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")
+	script(src=pathToFontAwesome)
 	script(src="https://unpkg.com/popper.js/dist/umd/popper.min.js")
 	script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js", integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy", crossorigin="anonymous")
 	script(src=pathToSkipTo)
@@ -81,7 +88,7 @@ mixin bodyIncludes(pathToRoot)
 
 mixin checkFor(title)
 	li
-		+fa('check-square-o')
+		+fao('check-square')
 		=title
 
 mixin modal
@@ -91,7 +98,7 @@ mixin modal
 				.modal-header
 					h2.modal-title.h5 Modal title goes here
 					button.close(type="button" data-dismiss="modal" aria-label="Close")
-						+faText('times','','Close Modal')
+						+fas('times','','Close Modal')
 
 				.modal-body
 					|Modal body text goes here.

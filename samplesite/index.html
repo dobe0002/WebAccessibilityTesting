@@ -4,12 +4,12 @@
     <title>
        Web Accessibility Testing - Sample Pages
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:500" rel="stylesheet"/>
     <link href="../assets/css/app.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <style>
-      .star{color:#009; padding-left:10px; padding-right:10px}
+      .star{color:#009; display:none}
       .notes{
       	margin-top:30px;margin-bottom:30px;
       
@@ -33,8 +33,8 @@
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-cogs fa-2x" aria-hidden="true"></i>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
       </ol>
     </nav>
     <main class="container">
@@ -44,12 +44,12 @@
           </h1>
           <div class="card bg-light">
             <div class="card-body row">
-              <div class="col-sm-2"><i class="fa fa-cogs fa-5x" aria-hidden="true"></i>
+              <div class="col-sm-2"><i class="fas fa-cogs fa-5x faIcon" aria-hidden="true"></i><span class="sr-only"></span>
               </div>
               <div class="col-sm-10">
                 <p>This mini-site contains pages for demonstrating and practicing web accessibility testing. </p>
                 <p>Because this is a "demo" site, the pages are "rough", have accessibility errors, and contain nonsensical text.</p>
-                <p><a href="https://z.umn.edu/kkd-a11y-testing#heading=" target="_blank">How to test document <i class="fa fa-external-link " aria-hidden="true"></i><span class="sr-only">(new window)</span></a>
+                <p><a href="https://z.umn.edu/kkd-a11y-testing#heading=" target="_blank">How to test document <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
                 </p>
               </div>
             </div>
@@ -60,22 +60,31 @@
       <ul>
         <li><a href="autoCheckers.html">Automatic Checkers</a></li>
         <li><a href="headings.html">Headings</a></li>
-        <li><a href="images.html">Image Alternative Text </a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
+        <li><a href="images.html">Image Alternative Text </a><i class="fas fa-star star faIcon" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
         </li>
-        <li><a href="tables.html">Data Tables </a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
+        <li><a href="tables.html">Data Tables </a><i class="fas fa-star star faIcon" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
         </li>
-        <li><a href="forms.html">Forms </a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
+        <li><a href="forms.html">Forms </a><i class="fas fa-star star faIcon" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
         </li>
         <li><a href="hyperlinks.html">Hyperlinks</a></li>
         <li><a href="colorIndication.html">Color Indication</a></li>
         <li><a href="colorContrast.html">Color Contrast</a></li>
-        <li><a href="keyboard.html">Keyboard Navigation</a><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
+        <li><a href="keyboard.html">Keyboard Navigation</a><i class="fas fa-star star faIcon" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>
         </li>
         <li><a href="landmarks.html">Landmarks</a></li>
         <li><a href="zoom.html">Zoom</a></li>
       </ul>
-      <p><i class="fa fa-star star" aria-hidden="true"></i><span class="sr-only">(most troublesome)</span>Considered most troublesome.
-      </p>
+      <h2>List of Sample Pages Addressing WCAG 2.1</h2>
+      <ul>
+        <li> <a href="orientation.html">Page orientation</a></li>
+        <li> <a href="autofill.html">Input purpose </a></li>
+        <li> <a href="reflow.html">Page flow</a></li>
+        <li><a href="colorContrastNonText.html">Non-text contrast</a></li>
+        <li><a href="spacing.html">Text spacing</a></li>
+        <li><a href="wrongLabel.html">Label in name</a></li>
+        <li> <a href="hoverfocus.html">Hover or focus</a></li>
+        <li><a href="statusMessage.html">Status messages</a></li>
+      </ul>
     </main>
     <footer><small>By Kim Doberstein - University of Minnesota </small></footer>
     <div class="modal" id="bs4Modal" tabindex="-1" role="dialog">
@@ -83,7 +92,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fa fa-times " aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>
@@ -93,6 +102,7 @@
     </div>
     <!--script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")-->
     <!--script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous")-->
+    <script src="../assets/fontAwesome5/js/fontawesome-all.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="../assets/javascripts/skipto.min.js"></script>
