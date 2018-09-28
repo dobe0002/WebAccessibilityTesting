@@ -3,6 +3,7 @@
 	display:none;
 	margin-top:1em;
 }
+a{display:inline-block}
 
 
 ///////////// ELEMENTS ////////////////////
@@ -52,13 +53,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   border: 1px solid #DDDDDD;
 }*/
  
-input:focus, textarea:focus, a:focus, button:focus, *[tabindex='0']:focus, *[tabindex='-1']:focus {
-	
+input:focus, textarea:focus, a:focus, button:focus, *[tabindex='0']:focus, *[tabindex='-1']:focus, 	.form-control:focus {
+ 
 	//  box-shadow: 0 0 8px rgba(81, 203, 255, 1);
 	  //padding: 3px 0px 3px 3px;
 	  //margin: 5px 1px 3px 0px;
 	  //border: 1px solid rgba(81, 203, 238, 1);
+	 
+		box-shadow: 0 0 0 0.2rem rgba(46, 110, 165, 0.73);
+	
 }
+.btn-outline-dark:focus, .btn-outline-dark.focus {
+	box-shadow: 0 0 0 0.2rem #8c8f93;
+	text-decoration: underline
+}
+
+.btn-primary:focus, .btn-primary.focus {
+	box-shadow: 0 0 0 0.2rem #7992a7;
+	text-decoration: underline
+}
+
 .noIndicator a:focus{
 	box-shadow:none !important;
 	//border:none !important;
@@ -139,8 +153,12 @@ footer, .siteFooter{
  }
 /////////// BREADCRUMB ////////////////////
 .breadcrumb{
-    	.breadcrumb-item.active{
-    		color:#656b71 ;
+    	.breadcrumb-item{
+			
+			&.active{
+				color:#656b71 ;
+			}
+			a{display:inline-block;}
     	}
 		.active{margin-top:10px;}
 		.waveLogo{

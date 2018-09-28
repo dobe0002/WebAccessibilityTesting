@@ -9,22 +9,29 @@
     <link href="../assets/css/app.css" rel="stylesheet"/>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <style>
-      input[type=text]{
-      	border:none;
-      	border-bottom:1px solid #898989;
-      }
+      /*
       #inputEmail3{
       	border-color:#ced4da;
+      	border:none;
+      	border-bottom:1px solid #898989;
+      
       }
       .bad{
       	border-color: #ced4da
       }
+      */
+      #inputName{
+      	border:none;
+      	border-bottom: 2px solid #898989
+      }
+      #inputEmail3{border:1px solid #ced4da}
       label{
       	font-weight:bold;
       }
       label:after{
       	content:":"
       }
+      
       
       .btn-primary:hover, .btn-primary:focus{
       	background-color:#245075;
@@ -118,17 +125,23 @@
             <div class="form-group row">
               <label class="col-sm-1 col-form-label" for="inputName">Name</label>
               <div class="col">
-                <input class="form-control bad" id="inputName" type="text"/>
+                <input class="form-control" id="inputName" type="text" autocomplete="name"/>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-1 col-form-label" for="inputEmail3">Email</label>
               <div class="col">
-                <input class="form-control" id="inputEmail3" type="email"/>
+                <input class="form-control" id="inputEmail3" type="E-mail" autocomplete="email"/>
               </div>
             </div>
             <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
               <p>The border around the "email" input field doesn't have a contrast ratio of at least 3:1.</p>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-1 col-form-label" for="inputPhone">Phone</label>
+              <div class="col">
+                <input class="form-control" id="inputPhone" type="text" autocomplete="tel-national"/>
+              </div>
             </div>
             <p>
               <button class="btn btn-primary btn-lg" type="button">Button 1</button>

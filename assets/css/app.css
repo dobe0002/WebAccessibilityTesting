@@ -6332,6 +6332,9 @@ $fa-font-path:        "font-awesome/fonts" !default;
   display: none;
   margin-top: 1em; }
 
+a {
+  display: inline-block; }
+
 ol li, ul li {
   margin-bottom: 10px; }
 
@@ -6364,6 +6367,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }*/
+input:focus, textarea:focus, a:focus, button:focus, *[tabindex='0']:focus, *[tabindex='-1']:focus, .form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(46, 110, 165, 0.73); }
+
+.btn-outline-dark:focus, .btn-outline-dark.focus {
+  box-shadow: 0 0 0 0.2rem #8c8f93;
+  text-decoration: underline; }
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem #7992a7;
+  text-decoration: underline; }
+
 .noIndicator a:focus {
   box-shadow: none !important;
   border-bottom-color: #cbd3da !important;
@@ -6420,6 +6434,9 @@ footer, .siteFooter {
 
 .breadcrumb .breadcrumb-item.active {
   color: #656b71; }
+
+.breadcrumb .breadcrumb-item a {
+  display: inline-block; }
 
 .breadcrumb .active {
   margin-top: 10px; }
