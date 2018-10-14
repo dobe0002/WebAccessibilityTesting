@@ -70,19 +70,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Sample Pages</a></li>
         <li class="active breadcrumb-item">Color Contrast Non-Text
         </li>
       </ol>
@@ -92,28 +91,39 @@
         <div class="col">
           <h1>Color Contrast Non-Text
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body">
-              <h2 class="h3">Things to check for:</h2>
-              <p>The following should have at least a contrast ratio of 3:1:</p>
-              <ul class="fa-ul">
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Input fields  border or a background color and the page background.
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Items receiving focus with color before receiving focus OR have an indicator besides color (like text underlining or additional shadow).
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Icons and other informational images with the page background
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Images inside an icon and the icon background color
-                </li>
-              </ul>
-              <ul class="list-inline testerActionButtons">
-                <li class="list-inline-item">
-                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
-                </li>
-                <li class="list-inline-item">
-                  <!-- +howToCheck("h.n0blawx4c67y")-->
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-sm-2"><i class="fal fa-clipboard-list fa-9x presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                  <!--span.sr-only #{text}-->
+                </div>
+                <div class="col">
+                  <h2 class="h3">Things to check for:</h2>
+                  <p>The following should have at least a contrast ratio of 3:1:</p>
+                  <ul class="fa-ul">
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Input fields  border or a background color and the page background.
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Items receiving focus with color before receiving focus OR have an indicator besides color (like text underlining or additional shadow).
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Icons and other informational images with the page background
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Images inside an icon and the icon background color
+                    </li>
+                  </ul>
+                  <ul class="list-inline testerActionButtons">
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                    </li>
+                    <li class="list-inline-item">
+                      <!-- +howToCheck("h.n0blawx4c67y")-->
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -134,7 +144,8 @@
                 <input class="form-control" id="inputEmail3" type="E-mail" autocomplete="email"/>
               </div>
             </div>
-            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+              <!--span.sr-only #{text}-->
               <p>The border around the "email" input field doesn't have a contrast ratio of at least 3:1.</p>
             </div>
             <div class="form-group row">
@@ -147,7 +158,8 @@
               <button class="btn btn-primary btn-lg" type="button">Button 1</button>
               <button class="btn btn-primary btn-lg button2" type="button">Button 2</button>
             </p>
-            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+              <!--span.sr-only #{text}-->
               <p>When Button 2 receives focus, the change in color doesn't have a contrast ratio of at least 3:1 with the color before receiving focus.  </p>
               <p>Button 2 does not have a secondary indicator, like a shadow, to assist the user from knowing button 2 has focus.</p>
             </div>
@@ -155,19 +167,23 @@
           <hr/>
           <h2>Info graphics</h2>
           <p>
-            <div class="rounded-circle imgOne"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">idea 1</span>
+            <div class="rounded-circle imgOne"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true" aria-label="idea 1"></i>
+              <!--span.sr-only #{text}-->
             </div>Idea 1
           </p>
           <p>
-            <div class="rounded-circle imgTwo"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">idea 2</span>
+            <div class="rounded-circle imgTwo"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true" aria-label="idea 2"></i>
+              <!--span.sr-only #{text}-->
             </div>Idea 2
           </p>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->
             <p>Idea 2 icon background does not have a contrast ratio of 3:1 wth the page background.</p>
             <p>The light bulb icon in Idea 2 does not have  a contrast ratio of 3:1 wth the icon background.</p>
           </div>
           <p>
-            <div class="rounded-circle imgThree"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">idea 3</span>
+            <div class="rounded-circle imgThree"><i class="far fa-lightbulb fa-2x faIcon" aria-hidden="true" aria-label="idea 3"></i>
+              <!--span.sr-only #{text}-->
             </div>Idea 3
           </p>
         </div>
@@ -179,7 +195,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>

@@ -347,10 +347,10 @@ h6, .h6 {
   line-height: 1.2; }
 
 hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  border-top: 1px solid #e1c8d8; }
 
 small,
 .small {
@@ -3035,7 +3035,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #efe9ed;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
@@ -3221,7 +3221,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: none;
   border-radius: 0.25rem; }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -6353,9 +6353,17 @@ table tbody tr th {
   font-weight: normal; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: "Roboto","Helvetica Neue", Arial, sans-serif;
+  color: #3f0a2d; }
+
+h2, .h2, h3, .h3, h4, .h4 {
   margin-top: 22px;
   margin-bottom: 11px;
   font-family: "Roboto","Helvetica Neue", Arial, sans-serif; }
+
+h1, .h1 {
+  margin-top: 0px;
+  margin-bottom: 30px; }
 
 /*input[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;
@@ -6384,35 +6392,38 @@ input:focus, textarea:focus, a:focus, button:focus, *[tabindex='0']:focus, *[tab
   outline: none !important; }
 
 header {
-  border-top: 15px solid #333; }
+  background-color: #333; }
 
 .page-header {
   border: none;
-  min-height: 125px;
-  background-position: right;
-  background-repeat: no-repeat;
   margin-bottom: 0;
-  padding-top: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   margin-top: 0;
   position: relative;
-  z-index: 50; }
+  z-index: 50;
+  text-align: right;
+  color: #bb6697; }
   .page-header small {
-    display: block;
-    margin-left: 15px;
-    color: #666; }
+    margin-left: 10px;
+    color: #808080;
+    font-size: 19px; }
   @media screen and (max-width: 768px) {
     .page-header {
       margin-top: 10px; } }
 
-.header-background {
-  position: absolute;
-  top: 0;
-  right: 15px;
-  background-image: url("../images/lotusBackground.png");
-  height: 124px;
-  width: 550px;
-  z-index: 25; }
+/*
+.header-background{
+		position:absolute;
+		top:0;
+		right:15px;
+		background-image: url("../images/lotusBackground.png");
+		height:124px;
+		width:550px;
+		z-index:25;
 
+	}
+*/
 footer, .siteFooter {
   display: block;
   margin: 25px auto;
@@ -6422,15 +6433,35 @@ footer, .siteFooter {
   text-align: center;
   font-size: 90%; }
 
-.jumbrotronImg {
-  margin-top: -25px;
-  margin-left: -25px; }
+/*
+.jumbrotronImg{
+	margin-top: -25px;
+	margin-left:-25px;
+}
+ .jumbotron{ 
+ 	h1{
+ 		font-size:36px;
+ 	}
+ 	small{display:block}
 
-.jumbotron h1 {
-  font-size: 36px; }
+ }
+ */
+.homeCard {
+  padding-left: 20px; }
 
-.jumbotron small {
-  display: block; }
+/* For width 400px and larger: */
+@media only screen and (min-width: 700px) {
+  .homeCard {
+    background-image: url("../images/lotusCardBG.png");
+    background-position: right bottom;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: 55% 100%; } }
+
+.homeCol h2 {
+  border-bottom: 1px solid #986e85;
+  padding-bottom: 10px; }
 
 .breadcrumb .breadcrumb-item.active {
   color: #656b71; }
@@ -6439,7 +6470,7 @@ footer, .siteFooter {
   display: inline-block; }
 
 .breadcrumb .active {
-  margin-top: 10px; }
+  margin-top: 5px; }
 
 .breadcrumb .waveLogo {
   width: 30px;
@@ -6454,6 +6485,9 @@ footer, .siteFooter {
 .breadcrumb a:hover .waveLogo {
   background-image: url(../images/wave/waveHover.png); }
 
+.breadcrumb .fa-2x {
+  font-size: 1.5em; }
+
 .bannerSpacer {
   /*padding: 0.75rem 1rem;
   margin-bottom: 1rem;
@@ -6467,6 +6501,12 @@ footer, .siteFooter {
 
 .testerActionButtons {
   margin-top: 30px; }
+
+.card .btn, .card .fa-check-square {
+  background-color: #fbfbfb; }
+
+.card .btn:hover {
+  background-color: #343a40; }
 
 #main_content .btn-link, #main_content a, main .btn-link, main a {
   border-bottom: 0.08em solid #cbd3da;

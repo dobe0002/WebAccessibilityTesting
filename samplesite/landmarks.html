@@ -13,19 +13,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Sample Pages</a></li>
         <li class="active breadcrumb-item">Landmarks
         </li>
       </ol>
@@ -35,26 +34,38 @@
         <div class="col">
           <h1>Landmarks
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body">
-              <h2 class="h3">Things to check for:</h2>
-              <ul class="fa-ul">
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Main content is surrounded by a &quot;main&quot; landmark. - There should only be 1 main landmark.
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Banners are wrapped in a &quot;header&quot; landmark
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Navigation elements are wrapped in a &quot;navigation&quot; landmark
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Footers are wrapped in a &quot;contentinfo&quot; or &quot;footer&quot; landmark.
-                </li>
-              </ul>
-              <ul class="list-inline testerActionButtons">
-                <li class="list-inline-item">
-                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
-                </li>
-                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.jmb3un68v8ef" target="_blank">How to check <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-sm-2"><i class="fal fa-clipboard-list fa-9x presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                  <!--span.sr-only #{text}-->
+                </div>
+                <div class="col">
+                  <h2 class="h3">Things to check for:</h2>
+                  <ul class="fa-ul">
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Main content is surrounded by a &quot;main&quot; landmark. - There should only be 1 main landmark.
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Banners are wrapped in a &quot;header&quot; landmark
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Navigation elements are wrapped in a &quot;navigation&quot; landmark
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Footers are wrapped in a &quot;contentinfo&quot; or &quot;footer&quot; landmark.
+                    </li>
+                  </ul>
+                  <ul class="list-inline testerActionButtons">
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                    </li>
+                    <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.jmb3un68v8ef" target="_blank">How to check <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+                        <!--span.sr-only #{text}--></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -73,19 +84,22 @@
             <li><a href="#2">Another link</a></li>
             <li><a href="#3">Another another link</a></li>
           </ul>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>"What's on this page" is not wrapped in a "navigation" landmark.
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->"What's on this page" is not wrapped in a "navigation" landmark.
           </div>
         </div>
       </div>
     </main>
     <p class="container">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet risus non eros dapibus lobortis. Etiam egestas lacinia libero, non posuere arcu lacinia non. In suscipit dapibus tortor ac commodo. Sed pretium libero in pharetra rutrum. Cras a ante viverra, fringilla tellus ut, blandit lorem.</p>
     <div class="container">
-      <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The last paragraph is outside of any landmarks.
+      <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+        <!--span.sr-only #{text}-->The last paragraph is outside of any landmarks.
       </div>
     </div>
     <div class="siteFooter"><small>By Kim Doberstein - University of Minnesota </small></div>
     <div class="container">
-      <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>Footer is not inside a "footer" or "contentinfo" landmark.
+      <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+        <!--span.sr-only #{text}-->Footer is not inside a "footer" or "contentinfo" landmark.
       </div>
     </div>
     <footer><small>By Kim Doberstein - University of Minnesota </small></footer>
@@ -94,7 +108,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>

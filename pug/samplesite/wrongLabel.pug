@@ -48,23 +48,25 @@ block content
 			.row
 				.col
 					form
-						.form-group.row
-							label.col-sm-1.col-form-label(for="inputName") Name
-							.col
-								input#inputName.form-control.bad(type="text" )
-						.form-group.row
-							duv.col-sm-1.col-form-label Phone
-							label.sr-only(for="inputPhone") Cell or landline telephone number
-							.col
-								input#inputPhone.form-control(type="text" )
-								+alert
-									| What is read by the screenreader (the accessible name) for the phone input does not match or start with that is visually shown (the label).
+						fieldset
+							legend Home address
+							.form-group.row
+								label.col-sm-1.col-form-label(for="inputName") Name
+								.col
+									input#inputName.form-control.bad(type="text" )
+							.form-group.row
+								duv.col-sm-1.col-form-label Phone
+								label.sr-only(for="inputPhone") Cell or landline telephone number
+								.col
+									input#inputPhone.form-control(type="text" )
+									+alert
+										| What is read by the screenreader (the accessible name) for the phone input does not match or start with that is visually shown (the label).
 
-						.form-group.row
-							div.col-sm-1.col-form-label(for="inputEmail3") Email
-							.col
-								input#inputEmail3.form-control(type="email" aria-label="Please enter your email address" )
-								+alert
-									| What is read by the screenreader (the accessible name) for the email input does not match or start with that is visually shown (the label).
+							.form-group.row
+								div.col-sm-1.col-form-label(for="inputEmail3") Email
+								.col
+									input#inputEmail3.form-control(type="email" aria-label="Please enter your email address" )
+									+alert
+										| What is read by the screenreader (the accessible name) for the email input does not match or start with that is visually shown (the label).
 
 			

@@ -37,10 +37,20 @@ table{
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+	font-family: "Roboto","Helvetica Neue", Arial, sans-serif;
+	color: #3f0a2d;
+}
+h2, .h2, h3, .h3, h4, .h4 {
     margin-top: 22px;
     margin-bottom: 11px;
     font-family: "Roboto","Helvetica Neue", Arial, sans-serif
 }
+h1, .h1{
+	margin-top:0px;
+	margin-bottom:30px;
+	
+}
+
 ////////////// OnFocus ///////////////////
 /*input[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;
@@ -83,28 +93,33 @@ input:focus, textarea:focus, a:focus, button:focus, *[tabindex='0']:focus, *[tab
 ///////////// Site Header ////////////////
 
 header{
-border-top:15px solid #333;
-
+///border-top:15px solid #333;
+background-color:#333;
 
 }
 
 .page-header{
 	border:none;
-	min-height:125px;
+	//min-height:125px;
 	//background-image: url("../images/lotusBackground.png");
-	background-position:right;
-	background-repeat: no-repeat;
+	//background-position:right;
+	//background-repeat: no-repeat;
 	margin-bottom:0;
-	padding-top:15px;
+	padding-top:5px;
+	padding-bottom:5px;
 	margin-top:0;
 	position:relative;
 	z-index:50;
+	text-align:right;
+	color:#bb6697;
+	
 
 	
 	small{
-		display:block;
-		margin-left:15px;
-		color:#666;
+	//	display:block;
+		margin-left:10px;
+		color:#808080;
+		font-size:19px
 	}
 	@media screen and (max-width: $screen-md)  {
 		margin-top:10px;
@@ -113,6 +128,7 @@ border-top:15px solid #333;
 
 	
 }
+/*
 .header-background{
 		position:absolute;
 		top:0;
@@ -123,7 +139,7 @@ border-top:15px solid #333;
 		z-index:25;
 
 	}
-
+*/
 
 //////////// Footer /////////////////////
 footer, .siteFooter{
@@ -140,6 +156,7 @@ footer, .siteFooter{
 
 
 ////////////// HOMEPAGE ////////////////
+/*
 .jumbrotronImg{
 	margin-top: -25px;
 	margin-left:-25px;
@@ -151,6 +168,29 @@ footer, .siteFooter{
  	small{display:block}
 
  }
+ */
+
+ .homeCard{
+	 padding-left:20px;
+ }
+ 
+/* For width 400px and larger: */
+@media only screen and (min-width: 700px) {
+    .homeCard{
+		background-image: url("../images/lotusCardBG.png");
+		background-position: right bottom; /* Center the image */
+		background-repeat: no-repeat; /* Do not repeat the image */
+		background-size: 55% 100%;
+
+    }
+}
+.homeCol{
+	h2{
+		border-bottom:1px solid #986e85;
+		padding-bottom:10px;
+	
+	}
+}
 /////////// BREADCRUMB ////////////////////
 .breadcrumb{
     	.breadcrumb-item{
@@ -160,7 +200,7 @@ footer, .siteFooter{
 			}
 			a{display:inline-block;}
     	}
-		.active{margin-top:10px;}
+		.active{margin-top:5px;}
 		.waveLogo{
 			width: 30px;
 			height: 28px;
@@ -176,6 +216,7 @@ footer, .siteFooter{
 				background-image: url(../images/wave/waveHover.png);
 			}
 		}
+		.fa-2x{font-size:1.5em;}
 
     }
 
@@ -194,6 +235,11 @@ footer, .siteFooter{
 .testerActionButtons{	margin-top:30px
 }
 
+.card{
+	.btn, .fa-check-square{background-color:#fbfbfb}
+	.btn:hover{background-color:#343a40}
+
+}
 
 //////////////// MAIN CONTENT //////////////
 #main_content, main{

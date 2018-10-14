@@ -17,19 +17,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-wrench fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Tools</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-wrench fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Tools</a></li>
       </ol>
     </nav>
     <main class="container">
@@ -37,9 +36,10 @@
         <div class="col">
           <h1>Tools
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body row">
-              <div class="col-sm-2"><i class="fas fa-wrench fa-5x faIcon" aria-hidden="true"></i><span class="sr-only"></span>
+              <div class="col-sm-2"><i class="fas fa-wrench fa-5x faIcon" aria-hidden="true" aria-label=""></i>
+                <!--span.sr-only #{text}-->
               </div>
               <div class="col-sm-10">
                 <p>
@@ -57,53 +57,73 @@
       <h3>Automated checking</h3>
       <p>Tools that check for a wide variety of issues.</p>
       <ul>
-        <li><a href="https://ainspector.github.io/" target="_blank">AInspector (Firefox) <i class="fas fa-asterisk asterisk faIcon" aria-hidden="true"></i><span class="sr-only">(requires Firefox ESR)</span> <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://ainspector.github.io/" target="_blank">AInspector (Firefox) <i class="fas fa-asterisk asterisk faIcon" aria-hidden="true" aria-label="(requires Firefox ESR)"></i>
+            <!--span.sr-only #{text}--> <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="http://wave.webaim.org/extension/" target="_blank">WAVE (Chrome and Firefox)  <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="http://wave.webaim.org/extension/" target="_blank">WAVE (Chrome and Firefox)  <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="https://www.deque.com/products/axe/" target="_blank">aXe (Chrome and Firefox)  <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://www.deque.com/products/axe/" target="_blank">aXe (Chrome and Firefox)  <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
       </ul>
       <h3>Specific issue checking</h3>
       <p>Used for manual checks.</p>
       <ul>
-        <li><a href="http://wave.webaim.org/extension/" target="_blank">WAVE (Chrome and Firefox)  <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="http://wave.webaim.org/extension/" target="_blank">WAVE (Chrome and Firefox)  <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="http://blrichwine.github.io/W15yQC/" target="_blank">W15YQC (Firefox) <i class="fas fa-asterisk asterisk faIcon" aria-hidden="true"></i><span class="sr-only">(requires Firefox ESR)</span> <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="http://blrichwine.github.io/W15yQC/" target="_blank">W15YQC (Firefox) <i class="fas fa-asterisk asterisk faIcon" aria-hidden="true" aria-label="(requires Firefox ESR)"></i>
+            <!--span.sr-only #{text}--> <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph" target="_blank">High Contrast (Chrome) <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph" target="_blank">High Contrast (Chrome) <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl/related" target="_blank">No Coffee Vision Simulator (Chrome) <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl/related" target="_blank">No Coffee Vision Simulator (Chrome) <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="https://chrome.google.com/webstore/detail/colora11y/icfneoldcbdmgaiocnnobpbbjncdfbfb" target="_blank">ColorA11y (Chrome) <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://chrome.google.com/webstore/detail/colora11y/icfneoldcbdmgaiocnnobpbbjncdfbfb" target="_blank">ColorA11y (Chrome) <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="https://chrispederick.com/work/web-developer/" target="_blank">Web Developer Toolbar (Chrome and Firefox)  <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://chrispederick.com/work/web-developer/" target="_blank">Web Developer Toolbar (Chrome and Firefox)  <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="https://chrome.google.com/webstore/detail/contrast-ratio-checker/kmicfegjejpginnockfnjpdgeffebdcf?hl=en" target="_blank">Contrast Ratio Checker (Chrome) <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://chrome.google.com/webstore/detail/contrast-ratio-checker/kmicfegjejpginnockfnjpdgeffebdcf?hl=en" target="_blank">Contrast Ratio Checker (Chrome) <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
       </ul>
       <h2>Bookmarklets</h2>
       <p>Bookmarks that assist in performing manual checks.</p>
       <ul>
-        <li><a href="http://khan.github.io/tota11y/" target="_blank">Tota11y <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="http://khan.github.io/tota11y/" target="_blank">Tota11y <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="http://paypal.github.io/skipto/" target="_blank">SkipTo <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="http://paypal.github.io/skipto/" target="_blank">SkipTo <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="https://accessibility-bookmarklets.org/install.html" target="_blank">Accessibility Bookmarklets <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://accessibility-bookmarklets.org/install.html" target="_blank">Accessibility Bookmarklets <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
       </ul>
       <h2>Screen Readers</h2>
       <ul>
-        <li><a href="https://www.nvaccess.org/" target="_blank">NVDA (Windows) <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://www.nvaccess.org/" target="_blank">NVDA (Windows) <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="http://www.freedomscientific.com/Products/Blindness/JAWS" target="_blank">JAWS (Windows) <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="http://www.freedomscientific.com/Products/Blindness/JAWS" target="_blank">JAWS (Windows) <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
-        <li><a href="https://help.apple.com/voiceover/info/guide/10.12/" target="_blank">VoiceOver(Mac) <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li><a href="https://help.apple.com/voiceover/info/guide/10.12/" target="_blank">VoiceOver(Mac) <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
       </ul>
       <h2>Notes</h2>
       <ul class="list-unstyled">
-        <li> <i class="fas fa-asterisk asterisk faIcon" aria-hidden="true"></i><span class="sr-only">(requires Firefox ESR)</span>Requires the <a href="https://www.mozilla.org/en-US/firefox/organizations/" target="_blank">ESR (pre verison 57) version of Firefox <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+        <li> <i class="fas fa-asterisk asterisk faIcon" aria-hidden="true" aria-label="(requires Firefox ESR)"></i>
+          <!--span.sr-only #{text}-->Requires the <a href="https://www.mozilla.org/en-US/firefox/organizations/" target="_blank">ESR (pre verison 57) version of Firefox <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+            <!--span.sr-only #{text}--></a>
         </li>
       </ul><small>Tools referenced in this document are for informational purposes only.  The University of Minnesota does not officially endorse any of the tools mentioned in this site.</small>
     </main>
@@ -113,7 +133,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>

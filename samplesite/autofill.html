@@ -14,19 +14,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Sample Pages</a></li>
         <li class="active breadcrumb-item">Input purpose (autocomplete attribute)
         </li>
       </ol>
@@ -36,25 +35,34 @@
         <div class="col">
           <h1>Input purpose (autocomplete attribute)
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body">
-              <h2 class="h3">Things to check for:</h2>
-              <ul class="fa-ul">
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Text input fields should have a valid autocomplete attribute.
-                </li>
-              </ul>
-              <ul class="list-inline testerActionButtons">
-                <li class="list-inline-item">
-                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
-                </li>
-                <li class="list-inline-item">
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-sm-2"><i class="fal fa-clipboard-list fa-9x presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                  <!--span.sr-only #{text}-->
+                </div>
+                <div class="col">
+                  <h2 class="h3">Things to check for:</h2>
+                  <ul class="fa-ul">
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Text input fields should have a valid autocomplete attribute.
+                    </li>
+                  </ul>
+                  <ul class="list-inline testerActionButtons">
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                    </li>
+                    <li class="list-inline-item">
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="alert alert-info"><i class="fas fa-info fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Information</span>Valid values for the autocomplete attribute are discussed on the <a href="https://www.w3.org/TR/html5/sec-forms.html#autofill-detail-tokens">W3C Autocomplete documentation.</a>
+      <div class="alert alert-info"><i class="fas fa-info fa-2x faIcon" aria-hidden="true" aria-label="Information"></i>
+        <!--span.sr-only #{text}-->Valid values for the autocomplete attribute are discussed on the <a href="https://www.w3.org/TR/html5/sec-forms.html#autofill-detail-tokens">W3C Autocomplete documentation.</a>
       </div>
       <div class="row">
         <div class="col">
@@ -145,7 +153,8 @@
               <button class="btn btn-primary" type="submit">Submit</button>
             </fieldset>
           </form>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->
             <p>All of the fields in the shipping address example are missing an autocomplete attribute.</p>
           </div>
         </div>
@@ -157,7 +166,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>

@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <style>
       .btn-link:hover, .btn-link:focus{cursor:pointer;}
-      .crazyForm{position:relative; padding-bottom:130px}
+      .crazyForm{position:relative; padding-bottom:40px}
       .crazyForm .form-group{width:45%}
       
     </style>
@@ -19,19 +19,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Sample Pages</a></li>
         <li class="active breadcrumb-item">Keyboard Navigation
         </li>
       </ol>
@@ -41,26 +40,38 @@
         <div class="col">
           <h1>Keyboard Navigation
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body">
-              <h2 class="h3">Things to check for:</h2>
-              <ul class="fa-ul">
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>&quot;Skip to content&quot; link is visually available
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Access and control all actionable items
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Tab order makes logical sense
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Tabbed to (focus) items look visually different
-                </li>
-              </ul>
-              <ul class="list-inline testerActionButtons">
-                <li class="list-inline-item">
-                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
-                </li>
-                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.ay7b6gs76aqw" target="_blank">How to check <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-sm-2"><i class="fal fa-clipboard-list fa-9x presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                  <!--span.sr-only #{text}-->
+                </div>
+                <div class="col">
+                  <h2 class="h3">Things to check for:</h2>
+                  <ul class="fa-ul">
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->&quot;Skip to content&quot; link is visually available
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Access and control all actionable items
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Tab order makes logical sense
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Tabbed to (focus) items look visually different
+                    </li>
+                  </ul>
+                  <ul class="list-inline testerActionButtons">
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                    </li>
+                    <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://z.umn.edu/kkd-a11y-testing#heading=h.ay7b6gs76aqw" target="_blank">How to check <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+                        <!--span.sr-only #{text}--></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -87,7 +98,8 @@
               <input class="form-control" id="exampleInputCity" type="text" placeholder="City"/>
             </div>
           </div>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->
             <p>Tab order is incorrect.  The tab order should be:</p>
             <ol>
               <li>First name</li>
@@ -97,25 +109,35 @@
               <li>Submit button</li>
             </ol>
           </div>
+          <hr/>
           <h2>Focus</h2>
           <p>Consider the following list of links:</p>
           <ol>
-            <li><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=1" target="_blank">Types of lotus flowers  <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+            <li><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=1" target="_blank">Types of lotus flowers  <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+                <!--span.sr-only #{text}--></a>
             </li>
-            <li><span class="btn-link" id="show_lotus_flower_modal" tabindex="0">View a group of lotus flowers<i class="far fa-clone  faIcon" aria-hidden="true"></i><span class="sr-only">(modal)</span></span>
-              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>"View a group of lotus flowers" cannot be activated via the keyboard.
+            <li><span class="btn-link" id="show_lotus_flower_modal" tabindex="0">View a group of lotus flowers<i class="far fa-clone  faIcon" aria-hidden="true" aria-label="(modal)"></i>
+                <!--span.sr-only #{text}--></span>
+              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+                <!--span.sr-only #{text}-->"View a group of lotus flowers" cannot be activated via the keyboard.
               </div>
             </li>
-            <li><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=3" target="_blank">Growing lotus flowers <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+            <li><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=3" target="_blank">Growing lotus flowers <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+                <!--span.sr-only #{text}--></a>
             </li>
-            <li class="sr-only"><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=4" target="_blank">Super sneaky night flowers <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+            <li class="sr-only"><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=4" target="_blank">Super sneaky night flowers <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+                <!--span.sr-only #{text}--></a>
             </li>
-            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The fourth link can recieve focus but is not visible
+            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+              <!--span.sr-only #{text}-->The fourth link can recieve focus but is not visible
             </div>
-            <li><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=5" target="_blank">The colors of lotus flowers <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
+            <li><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=5" target="_blank">The colors of lotus flowers <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+                <!--span.sr-only #{text}--></a>
             </li>
-            <li class="noIndicator"><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=6" target="_blank">Lotus flowers around the world <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
-              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The "Lotus flowers around the world" does not have a focus indicator.
+            <li class="noIndicator"><a href="https://en.wikipedia.org/wiki/Nelumbo_nucifera?link=6" target="_blank">Lotus flowers around the world <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+                <!--span.sr-only #{text}--></a>
+              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+                <!--span.sr-only #{text}-->The "Lotus flowers around the world" does not have a focus indicator.
               </div>
             </li>
           </ol>
@@ -128,7 +150,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>

@@ -1,4 +1,8 @@
 /************** Document load ************/
+setTimeout(function(){
+  $('.breadcrumb svg[role="img"], .presentationRole').attr('role','none')
+},100)
+
 
 $(".toggle-warnings-btn").click(function(){
   var btn = $(this);

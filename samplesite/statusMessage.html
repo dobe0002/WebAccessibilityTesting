@@ -14,19 +14,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Sample Pages</a></li>
         <li class="active breadcrumb-item">Status Messages
         </li>
       </ol>
@@ -36,20 +35,28 @@
         <div class="col">
           <h1>Status Messages
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body">
-              <h2 class="h3">Things to check for:</h2>
-              <ul class="fa-ul">
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Status messages that are initialed by a user action (like a button click) and no not change focus are announced by a screen reader.
-                </li>
-              </ul>
-              <ul class="list-inline testerActionButtons">
-                <li class="list-inline-item">
-                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
-                </li>
-                <li class="list-inline-item">
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-sm-2"><i class="fal fa-clipboard-list fa-9x presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                  <!--span.sr-only #{text}-->
+                </div>
+                <div class="col">
+                  <h2 class="h3">Things to check for:</h2>
+                  <ul class="fa-ul">
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Status messages that are initialed by a user action (like a button click) and no not change focus are announced by a screen reader.
+                    </li>
+                  </ul>
+                  <ul class="list-inline testerActionButtons">
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                    </li>
+                    <li class="list-inline-item">
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -60,7 +67,8 @@
           <p>
             <button class="btn btn-primary" id="custButton">Load customers</button>
           </p>
-          <div class="alert alert-dark" role="alert" id="custLoad"><i class="fas fa-circle-notch fa-spin fa-2x fa-fw faIcon" aria-hidden="true"></i><span class="sr-only">Loading customers</span>
+          <div class="alert alert-dark" role="alert" id="custLoad"><i class="fas fa-circle-notch fa-spin fa-2x fa-fw faIcon" aria-hidden="true" aria-label="Loading customers"></i>
+            <!--span.sr-only #{text}-->
           </div>
           <div class="alert sr-only" role="alert" id="custLoadDone">3 customers loaded</div>
           <table class="table table-striped" id="custTable">
@@ -99,7 +107,8 @@
               <button class="btn btn-primary" id="custNewButton">Add customer</button>
             </div>
           </div>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->
             <p>The add new customer confirmation is not announced as an alert by a screen reader.</p>
           </div>
           <hr/>
@@ -114,7 +123,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>

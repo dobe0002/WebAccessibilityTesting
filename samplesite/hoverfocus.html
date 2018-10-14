@@ -19,19 +19,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Sample Pages</a></li>
         <li class="active breadcrumb-item">Hover and Focus
         </li>
       </ol>
@@ -41,22 +40,31 @@
         <div class="col">
           <h1>Hover and Focus
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body">
-              <h2 class="h3">Things to check for:</h2>
-              <ul class="fa-ul">
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>You can dismiss the tooltip, popover, or modal without loosing focus or moving the mouse.
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>You can hover over the tooltip, popover, or modal without it closing.
-                </li>
-              </ul>
-              <ul class="list-inline testerActionButtons">
-                <li class="list-inline-item">
-                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
-                </li>
-                <li class="list-inline-item">
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-sm-2"><i class="fal fa-clipboard-list fa-9x presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                  <!--span.sr-only #{text}-->
+                </div>
+                <div class="col">
+                  <h2 class="h3">Things to check for:</h2>
+                  <ul class="fa-ul">
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->You can dismiss the tooltip, popover, or modal without loosing focus or moving the mouse.
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->You can hover over the tooltip, popover, or modal without it closing.
+                    </li>
+                  </ul>
+                  <ul class="list-inline testerActionButtons">
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                    </li>
+                    <li class="list-inline-item">
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -71,7 +79,8 @@
           <h2>Tooltip example set 2</h2>
           <p>
              Lorem ipsum dolor sit amet, <span class="myToolTip2" data-toggle="tooltip" title="Tooltip example 1">consectetur adipiscing elit. </span>Vivamus in magna ac nunc faucibus lacinia. Cras id volutpat nisi. Ut molestie lectus at eros tempor venenatis. <span class="myToolTip2" data-toggle="tooltip" title="Tooltip example 2">in nunc sapien. </span>Morbi laoreet dictum leo ut tempor. Morbi eu mi sed libero interdum ultricies. <span class="myToolTip2" data-toggle="tooltip" title="Tooltip example 3">Aliquam in varius urna, </span>nec auctor turpis. Nullam et luctus lectus.</p>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->
             <p>Tooltip example set 2 is only available on hover.  </p>
             <P>The user cannot activate the tooltip by using the tab key (on focus).  </P>
             <p>The tooltip itself closes when a user attempts to move the mouse on top of the tooltip.</p>
@@ -79,7 +88,8 @@
           </div>
           <hr/>
           <h2>Tooltip example set 3</h2>Lorem ipsum dolor sit amet, <span class="myToolTip3" data-toggle="tooltip" title="Tooltip example 1" tabindex="0">consectetur adipiscing elit. </span>Vivamus in magna ac nunc faucibus lacinia. Cras id volutpat nisi. Ut molestie lectus at eros tempor venenatis. <span class="myToolTip3" data-toggle="tooltip" title="Tooltip example 2" tabindex="0">in nunc sapien. </span>Morbi laoreet dictum leo ut tempor. Morbi eu mi sed libero interdum ultricies. <span class="myToolTip3" data-toggle="tooltip" title="Tooltip example 3" tabindex="0">Aliquam in varius urna, </span>nec auctor turpis. Nullam et luctus lectus.
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->
             <p>Tooltip example set 3 is only available on focus (the tooltip must be tabbed to).   </p>
             <p>The tooltip cannot be closed without moving focus (hitting the tab key) or the mouse (by hitting the escape key for example).</p>
           </div>
@@ -99,7 +109,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>
