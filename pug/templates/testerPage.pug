@@ -14,19 +14,23 @@ block contentContainer
 		.col
 			h1
 				block title
-			.card.bg-light
+			.card
 				.card-body
-					h2.h3 Things to check for:
-					block checkForIntro
-					ul.fa-ul
-						block checkFor
-					block example
-					ul.list-inline.testerActionButtons
-						li.list-inline-item
-							button.btn.btn-outline-dark.btn-sm.toggle-warnings-btn
-								|Toggle hints
-						li.list-inline-item
-							block howToCheckURL
+					.row
+						.col-sm-2
+							+fal('clipboard-list','fa-9x presentationRole')
+						.col
+							h2.h3 Things to check for:
+							block checkForIntro
+							ul.fa-ul
+								block checkFor
+							block example
+							ul.list-inline.testerActionButtons
+								li.list-inline-item
+									button.btn.btn-outline-dark.btn-sm.toggle-warnings-btn
+										|Toggle hints
+								li.list-inline-item
+									block howToCheckURL
 	block content
 
 block outsideLandmark

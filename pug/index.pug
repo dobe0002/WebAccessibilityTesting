@@ -8,15 +8,13 @@ block head
 block title
 	|Home
 
-block icon
-	img.img-fluid(src="assets/images/lotusBlossum.png" alt="")
+
 
 block intro
 	p.h1(style='margin-bottom:0') You Can Do This.
 	h1.h5(style='margin-top:0') Web Accessibility Testing for Everyone.
-	p Testing accessibility can be intimidating, let's make it easier so everyone can participate.
-	p
-		+testingDocLink('','Handout','btn btn-primary btn-lg')
+	p Making testing easier so everyone can participate.
+	p 
 
 block feature1
 	h2 Tools
@@ -28,6 +26,13 @@ block feature1
 
 
 block feature2
+	h2 How To's
+	p
+		|Customizable document on how to perform accessibility tests.
+	p.button-row
+		+testingDocLink('','Handout','btn btn-primary ')
+
+block feature3
 	h2 Sample Website
 	p
 		|Sample website to practice your web accessibility testing skills. Errors are clearly marked.
@@ -36,21 +41,7 @@ block feature2
 			+fas('cogs')
 			|Sample pages
 
-block feature3
-	h2 Trainings
-	p.
-		There are times when "playing around" just isn't enough and some additional training is needed.  List of training options, materials, and resources.
-
-	p
-		a(href="wave/index.html")
-			+fas('users')
-			|WAVE
-
-	p.button-row
-		a.btn.btn-outline-dark(href="samplesite/forms2.html")
-			+fas('users')
-			|Featured Training - Forms
-		
+			
 block about
 	div(style="display:none")
 		h2 About

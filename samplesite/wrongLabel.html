@@ -22,19 +22,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Sample Pages</a></li>
         <li class="active breadcrumb-item">Label in Name
         </li>
       </ol>
@@ -44,21 +43,29 @@
         <div class="col">
           <h1>Label in Name
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body">
-              <h2 class="h3">Things to check for:</h2>
-              <ul class="fa-ul">
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>What a screenreader calls an element (accessible name) matches or starts with what is visible on screen (label).
-                </li>
-              </ul>
-              <ul class="list-inline testerActionButtons">
-                <li class="list-inline-item">
-                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
-                </li>
-                <li class="list-inline-item">
-                  <!-- +howToCheck("h.n0blawx4c67y")-->
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-sm-2"><i class="fal fa-clipboard-list fa-9x presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                  <!--span.sr-only #{text}-->
+                </div>
+                <div class="col">
+                  <h2 class="h3">Things to check for:</h2>
+                  <ul class="fa-ul">
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->What a screenreader calls an element (accessible name) matches or starts with what is visible on screen (label).
+                    </li>
+                  </ul>
+                  <ul class="list-inline testerActionButtons">
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                    </li>
+                    <li class="list-inline-item">
+                      <!-- +howToCheck("h.n0blawx4c67y")-->
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -67,21 +74,25 @@
         <div class="col">
           <h2>Ways to store code</h2>
           <div class="row codeStore">
-            <div class="col"><i class="fab fa-codepen fa-5x faIcon" aria-hidden="true"></i><span class="sr-only"></span>
+            <div class="col"><i class="fab fa-codepen fa-5x faIcon" aria-hidden="true" aria-label=""></i>
+              <!--span.sr-only #{text}-->
               <p>
                 <button class="btn btn-primary btn-lg" role="link" aria-label="CodePen in a new window">CodePen</button>
               </p>
             </div>
-            <div class="col"><i class="fab fa-jsfiddle fa-5x faIcon" aria-hidden="true"></i><span class="sr-only"></span>
+            <div class="col"><i class="fab fa-jsfiddle fa-5x faIcon" aria-hidden="true" aria-label=""></i>
+              <!--span.sr-only #{text}-->
               <p>
                 <button class="btn btn-primary btn-lg" role="link">JSFiddle</button>
               </p>
             </div>
-            <div class="col"><i class="fab fa-github fa-5x faIcon" aria-hidden="true"></i><span class="sr-only"></span>
+            <div class="col"><i class="fab fa-github fa-5x faIcon" aria-hidden="true" aria-label=""></i>
+              <!--span.sr-only #{text}-->
               <p>
                 <button class="btn btn-primary btn-lg" role="link" aria-label="Open new window for GitHub">GitHub</button>
               </p>
-              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>What is read by the screenreader (the accessible name) for the GitHub button does not match or start with that is visually shown (the label).
+              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+                <!--span.sr-only #{text}-->What is read by the screenreader (the accessible name) for the GitHub button does not match or start with that is visually shown (the label).
               </div>
               <!-- button.btn.btn-primary.btn-lg(type="button" ) Button 1-->
               <!-- button.btn.btn-primary.btn-lg.button2(type="button" ) Button 2-->
@@ -92,29 +103,34 @@
           <div class="row">
             <div class="col">
               <form>
-                <div class="form-group row">
-                  <label class="col-sm-1 col-form-label" for="inputName">Name</label>
-                  <div class="col">
-                    <input class="form-control bad" id="inputName" type="text"/>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <duv class="col-sm-1 col-form-label">Phone</duv>
-                  <label class="sr-only" for="inputPhone">Cell or landline telephone number</label>
-                  <div class="col">
-                    <input class="form-control" id="inputPhone" type="text"/>
-                    <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>What is read by the screenreader (the accessible name) for the phone input does not match or start with that is visually shown (the label).
+                <fieldset>
+                  <legend>Home address</legend>
+                  <div class="form-group row">
+                    <label class="col-sm-1 col-form-label" for="inputName">Name</label>
+                    <div class="col">
+                      <input class="form-control bad" id="inputName" type="text"/>
                     </div>
                   </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-1 col-form-label" for="inputEmail3">Email</div>
-                  <div class="col">
-                    <input class="form-control" id="inputEmail3" type="email" aria-label="Please enter your email address"/>
-                    <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>What is read by the screenreader (the accessible name) for the email input does not match or start with that is visually shown (the label).
+                  <div class="form-group row">
+                    <duv class="col-sm-1 col-form-label">Phone</duv>
+                    <label class="sr-only" for="inputPhone">Cell or landline telephone number</label>
+                    <div class="col">
+                      <input class="form-control" id="inputPhone" type="text"/>
+                      <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+                        <!--span.sr-only #{text}-->What is read by the screenreader (the accessible name) for the phone input does not match or start with that is visually shown (the label).
+                      </div>
                     </div>
                   </div>
-                </div>
+                  <div class="form-group row">
+                    <div class="col-sm-1 col-form-label" for="inputEmail3">Email</div>
+                    <div class="col">
+                      <input class="form-control" id="inputEmail3" type="email" aria-label="Please enter your email address"/>
+                      <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+                        <!--span.sr-only #{text}-->What is read by the screenreader (the accessible name) for the email input does not match or start with that is visually shown (the label).
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
               </form>
             </div>
           </div>
@@ -127,7 +143,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>

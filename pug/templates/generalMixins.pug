@@ -24,12 +24,17 @@ mixin fao(type,extraClasses,text)
 mixin fab(type,extraClasses,text)
 	+fabase(type,extraClasses,text,"b")
 
+mixin fal(type,extraClasses,text)
+	+fabase(type,extraClasses,text,"l")
+
 mixin fabase(type,extraClasses,text,fill)
 	- extraClasses = extraClasses || ''
-	- var c='fa'+fill+' fa-'+type+' '+extraClasses+" faIcon"
-	i(class= c aria-hidden='true')
 	- text = text || ''
-	span.sr-only #{text}
+	- var c='fa'+fill+' fa-'+type+' '+extraClasses+" faIcon"
+	
+	i(class= c aria-hidden='true' aria-label=text)
+	
+	//span.sr-only #{text}
 
 
 mixin alert
@@ -56,12 +61,12 @@ mixin banner
 	header
 		.container
 			.row
-				.col-sm-11
-					.page-header.h1
+				.col-sm-12
+					.page-header.h4
 						|Web Accessibility Testing
 						small For Everyone
 
-				.col.d-none.d-lg-block
+				//- .col.d-none.d-lg-block
 					.header-background
 
 mixin headIncludes(pathToRoot)
@@ -88,7 +93,7 @@ mixin bodyIncludes(pathToRoot)
 
 mixin checkFor(title)
 	li
-		+fao('check-square')
+		+fao('check-square','presentationRole')
 		=title
 
 mixin modal

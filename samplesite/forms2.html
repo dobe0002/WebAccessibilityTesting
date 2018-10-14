@@ -29,19 +29,18 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-sm-11">
-            <div class="page-header h1">Web Accessibility Testing<small>For Everyone</small></div>
-          </div>
-          <div class="col d-none d-lg-block">
-            <div class="header-background"></div>
+          <div class="col-sm-12">
+            <div class="page-header h4">Web Accessibility Testing<small>For Everyone</small></div>
           </div>
         </div>
       </div>
     </header>
     <nav class="container">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Home</a></li>
-        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true"></i><span class="sr-only"></span>Sample Pages</a></li>
+        <li class="breadcrumb-item"><a href="../index.html"><i class="fas fa-home fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Home</a></li>
+        <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-cogs fa-2x faIcon" aria-hidden="true" aria-label=""></i>
+            <!--span.sr-only #{text}-->Sample Pages</a></li>
         <li class="active breadcrumb-item">Forms - More Issues
         </li>
       </ol>
@@ -51,28 +50,41 @@
         <div class="col">
           <h1>Forms - More Issues
           </h1>
-          <div class="card bg-light">
+          <div class="card">
             <div class="card-body">
-              <h2 class="h3">Things to check for:</h2>
-              <ul class="fa-ul">
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Form labels are associated with their elements.
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>You can easily get to and control all actionable items only using the keyboard.
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>The tab order of form elements make sense.
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>A form element that has “focus” ( tabbed or arrowed to) looks visually different.
-                </li>
-                <li><i class="far fa-check-square  faIcon" aria-hidden="true"></i><span class="sr-only"></span>Help and error text is connected to the form field.
-                </li>
-              </ul>
-              <ul class="list-inline testerActionButtons">
-                <li class="list-inline-item">
-                  <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
-                </li>
-                <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://docs.google.com/document/d/1wnpSZfZQbxMEK4QC635E4IL2GZK4p0eaECKZ3oIti7s/" target="_blank">How to check <i class="far fa-external-link  faIcon" aria-hidden="true"></i><span class="sr-only">in a new window</span></a>
-                </li>
-              </ul>
+              <div class="row">
+                <div class="col-sm-2"><i class="fal fa-clipboard-list fa-9x presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                  <!--span.sr-only #{text}-->
+                </div>
+                <div class="col">
+                  <h2 class="h3">Things to check for:</h2>
+                  <ul class="fa-ul">
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Form labels are associated with their elements.
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->You can easily get to and control all actionable items only using the keyboard.
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->The tab order of form elements make sense.
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->A form element that has “focus” ( tabbed or arrowed to) looks visually different.
+                    </li>
+                    <li><i class="far fa-check-square presentationRole faIcon" aria-hidden="true" aria-label=""></i>
+                      <!--span.sr-only #{text}-->Help and error text is connected to the form field.
+                    </li>
+                  </ul>
+                  <ul class="list-inline testerActionButtons">
+                    <li class="list-inline-item">
+                      <button class="btn btn-outline-dark btn-sm toggle-warnings-btn">Toggle hints</button>
+                    </li>
+                    <li class="list-inline-item"><a class="btn btn-outline-dark btn-sm" href="https://docs.google.com/document/d/1wnpSZfZQbxMEK4QC635E4IL2GZK4p0eaECKZ3oIti7s/" target="_blank">How to check <i class="far fa-external-link  faIcon" aria-hidden="true" aria-label="in a new window"></i>
+                        <!--span.sr-only #{text}--></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -90,7 +102,8 @@
               <label>First name</label>
               <input class="form-control" id="exampleInputFirstName" type="text" placeholder="First Name"/>
             </div>
-            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The "First name" label is not associated with its text field.
+            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+              <!--span.sr-only #{text}-->The "First name" label is not associated with its text field.
             </div>
             <div class="form-group pull-left">
               <label for="exampleInputAddress">Address</label>
@@ -101,15 +114,19 @@
               <input class="form-control" id="exampleInputCity" type="text" placeholder="City"/>
             </div>
             <div class="form-group">
-              <div id="star"><i class="fas fa-star fa-2x starFull faIcon" aria-hidden="true"></i><span class="sr-only"></span><i class="far fa-star fa-2x starOpen faIcon" aria-hidden="true"></i><span class="sr-only"></span>
+              <div id="star"><i class="fas fa-star fa-2x starFull faIcon" aria-hidden="true" aria-label=""></i>
+                <!--span.sr-only #{text}--><i class="far fa-star fa-2x starOpen faIcon" aria-hidden="true" aria-label=""></i>
+                <!--span.sr-only #{text}-->
               </div>
               <label for="sampleRating">Are you a super star?</label>
               <input id="sampleRating" type="checkbox" style="display:none"/>
-              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>Rating (star) input is not reachable via the keyboard.
+              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+                <!--span.sr-only #{text}-->Rating (star) input is not reachable via the keyboard.
               </div>
             </div>
           </form>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->
             <p>Tab order is incorrect.  The tab order should be:</p>
             <ol>
               <li>First name</li>
@@ -125,7 +142,8 @@
           <form>
             <div class="form-group">
               <input class="form-control specialLabel" id="exampleInputSearch" type="text" placeholder="Search"/>
-              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>Search is missing a label
+              <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+                <!--span.sr-only #{text}-->Search is missing a label
               </div>
             </div>
             <div class="form-group">
@@ -178,7 +196,8 @@
               <input class="form-check-input" id="purple" name="color" value="Purple" type="checkbox"/>
               <label class="form-check-label" for="purple">Purple</label>
             </div>
-            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The color checkboxes are missing a fieldset and legend.
+            <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+              <!--span.sr-only #{text}-->The color checkboxes are missing a fieldset and legend.
             </div>
           </div>
           <div class="form-group">
@@ -189,7 +208,8 @@
             <label for="climate">Climate</label>
             <input class="form-control" id="climate" type="text" placeholder="" style="width:300px"/><small class="form-text text-muted" id="climateHelpBlock">Describe your climate including average temperature.</small>
           </div>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The "Climate" field does not have the directions associated with the textbox (field element).
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->The "Climate" field does not have the directions associated with the textbox (field element).
           </div>
           <hr/>
           <h2>Gardening Experience (Required elements are marked with a "*")</h2>
@@ -201,7 +221,8 @@
             <label for="favoriteFlower">* Favorite flower</label>
             <input class="form-control" id="favoriteFlower" type="text" placeholder="" style="width:300px"/>
           </div>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The "Favorite Flower" field is missing the required='true' or aria-required='true' attribute.
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->The "Favorite Flower" field is missing the required='true' or aria-required='true' attribute.
           </div>
           <div class="form-group">
             <label for="typesOfPlants">* Types of plants grown</label>
@@ -214,14 +235,16 @@
             <label class="form-check-label" for="codeOfConduct">* Agree to gardner's code of conduct</label>
             <div class="invalid-feedback" id="codeOfConductError" style="display:block">Error: Please check the box to continue.</div>
           </div>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>The code of conduct check box is missing the aria-invalid='true' attribute and the error message is not connected to the checkbox via the aria-describedby attribute.
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->The code of conduct check box is missing the aria-invalid='true' attribute and the error message is not connected to the checkbox via the aria-describedby attribute.
           </div>
           <div style="height:30px"></div>
           <div class="form-group">
             <label for="goals">* Your gardening goals for the next year</label>
             <input class="form-control is-invalid" id="goals" type="text" placeholder="" style="width:300px" required="true" aria-invalid="true"/>
           </div>
-          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true"></i><span class="sr-only">Bug</span>Only color is used to represent that there is an error on the goals text field.
+          <div class="alert alert-warning"><i class="fas fa-bug fa-2x faIcon" aria-hidden="true" aria-label="Bug"></i>
+            <!--span.sr-only #{text}-->Only color is used to represent that there is an error on the goals text field.
           </div>
         </div>
       </div>
@@ -232,7 +255,8 @@
         <div class="modal-content">
           <div class="modal-header">
             <h2 class="modal-title h5">Modal title goes here</h2>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true"></i><span class="sr-only">Close Modal</span>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times  faIcon" aria-hidden="true" aria-label="Close Modal"></i>
+              <!--span.sr-only #{text}-->
             </button>
           </div>
           <div class="modal-body">Modal body text goes here.</div>
