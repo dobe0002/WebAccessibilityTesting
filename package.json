@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "compile:pug": "pug pug --out ./public",
+    "move": "cp -r ./pug/assets/vendor ./public/assets/vendor && cp -r ./pug/assets/images ./public/assets/images",
+    "compress:js": "mkdir ./public/assets/javascripts && uglifyjs-folder ./pug/assets/javascripts -e -o ./public/assets/javascripts",
+    "compile:SCSS": "node-sass ./pug/assets/css -o ./public/assets/css",
+    "build":"rm -rf ./public && npm run compile:pug && npm run compile:SCSS && npm run compress:js && npm run move"
+  },
+  "dependencies": {
+    "pug": "2.0.4",
+    "pug-cli": "1.0.0-alpha6",
+    "node-sass": "^4.13.1",
+    "uglifyjs-folder": "^1.5.2"
+  }
+}
