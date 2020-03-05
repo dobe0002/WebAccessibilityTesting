@@ -1,0 +1,70 @@
+extends ../templates/testerPage.pug
+
+block title
+  |Automated Checkers - Detailed
+
+block checkFor
+  +checkFor("Look at each violation/error and warning")
+  +checkFor("Run in multiple checkers")
+
+block content
+  .row
+    .col
+      h2 Headings
+      p. 
+        This section explores the proper use of headings
+      h3 Example A: Sub-heading
+
+      h3.h1 Example B: Styled to look like a larger heading
+
+      h2.h3 Example C: Heading styled to look like a smaller heading
+      h4 Example D: Skip a level
+      h6.h3 Example E: Skip more levels
+
+      div.h3 Example F: Styled to look like a sub-heading
+
+      +alert
+        p Example D skips from heading level 2 to heading level 4 (skipping level 3)
+        p Example E skips from heading level 4 to heading level 6 (skipping level 5)
+        p Example F isn't coded as an example but should be
+
+      hr
+
+      h2 Alternative Text
+
+      p. 
+        This section explores alternative text for images and icons
+
+      p
+        | Image with correct alternative text:  
+        img(src="../assets/images/lotusYogaPose.png" alt="Example image with alternative text" style="width:150px")
+
+      p
+        | Image with missing alterative text:  
+        img(src="../assets/images/lotusBud.png" style="width:150px" )
+
+
+      p Some sample links:
+      ul
+        li
+          a(href="http://my.favorite.pdf")
+            +fao('file-pdf','fa-3x')
+          +alert
+            |"PDF" image is missing an alt text.  The alt text should be set to "PDF document".
+        li
+          a(href="http://umn.edu")
+            +fas('university','fa-3x','U of M Homepage')
+   
+      hr
+
+
+
+
+block outsideLandmark
+  .container
+    p
+      +fas('quote-left','fa-3x')
+      |  If there's nothing wrong with me... maybe there's something wrong with the universe.
+    +alert
+      |The paragraph above is not contained in an ARIA landmark.
+

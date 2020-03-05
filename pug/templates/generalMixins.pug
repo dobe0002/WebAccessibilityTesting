@@ -27,12 +27,14 @@ mixin fab(type,extraClasses,text)
 mixin fal(type,extraClasses,text)
 	+fabase(type,extraClasses,text,"l")
 
-mixin fabase(type,extraClasses,text,fill)
+mixin fabase(type,extraClasses,text,fill, hidden)
 	- extraClasses = extraClasses || ''
 	- text = text || ''
 	- var c='fa'+fill+' fa-'+type+' '+extraClasses+" faIcon"
-	
-	i(class= c aria-hidden='true' aria-label=text)
+	- var h = text === '' ? true : false
+	- var t = text === '' ? false : text
+
+	i(class=c aria-hidden=h title=t )
 	
 	//span.sr-only #{text}
 
