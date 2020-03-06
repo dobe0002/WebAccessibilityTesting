@@ -1,10 +1,11 @@
 {
   "scripts": {
     "compile:pug": "pug pug --out ./public",
-    "move": "cp -r ./pug/assets/vendor ./public/assets/vendor && cp -r ./pug/assets/images ./public/assets/images",
+    "move": "mkdir -p ./public/assets/vendor && mkdir -p ./public/assets/images && cp -r ./pug/assets/vendor ./public/assets/ && cp -r ./pug/assets/images ./public/assets/",
     "compress:js": "mkdir ./public/assets/javascripts && uglifyjs-folder ./pug/assets/javascripts -e -o ./public/assets/javascripts",
     "compile:SCSS": "node-sass ./pug/assets/css -o ./public/assets/css",
-    "build": "rm -rf ./public && npm run compile:pug && npm run compile:SCSS && npm run compress:js && npm run move",
+    "buildPug": "npm run compile:pug && npm run move",
+    "build": " rm -rf ./public && webpack --mode production ",
     "start": "webpack-dev-server --open"
   },
   "dependencies": {
@@ -14,6 +15,15 @@
     "uglifyjs-folder": "^1.5.2",
     "webpack-dev-server": "3.10.3",
     "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "mini-css-extract-plugin": "^0.9.0",
+    "event-hooks-webpack-plugin": "^2.1.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "sass-loader": "^8.0.2",
+    "@babel/core": "^7.8.7",
+    "file-loader": "^5.1.0",
+    "pug-html-loader": "^1.1.5",
+    "html-loader": "^0.5.5"
   }
 }
